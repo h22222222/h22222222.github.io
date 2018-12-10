@@ -3,24 +3,28 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>杂记 | YuqingHe&#39;s mind</title>
+  <title>如何正确优雅地使用武大超算进行MATLAB计算 | YuqingHe&#39;s mind</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有一天，你会发现，你之前选择的路，不一定就是最合适你的">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="当有两个自变量和一个因变量需要进行可视化时，可以使用mesh命令绘制双变量的三维图。">
+<meta name="keywords" content="MATLAB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杂记">
-<meta property="og:url" content="https://github.com/h22222222/h22222222.github.io/2018/12/08/杂记/index.html">
+<meta property="og:title" content="如何正确优雅地使用武大超算进行MATLAB计算">
+<meta property="og:url" content="https://github.com/h22222222/h22222222.github.io/2018/12/08/MATLAB中如何实现mesh三维图/index.html">
 <meta property="og:site_name" content="YuqingHe&#39;s mind">
-<meta property="og:description" content="有一天，你会发现，你之前选择的路，不一定就是最合适你的">
+<meta property="og:description" content="当有两个自变量和一个因变量需要进行可视化时，可以使用mesh命令绘制双变量的三维图。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-08T01:15:22.856Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181210145259122.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181210145912903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181210145725823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2018-12-10T07:05:16.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杂记">
-<meta name="twitter:description" content="有一天，你会发现，你之前选择的路，不一定就是最合适你的">
+<meta name="twitter:title" content="如何正确优雅地使用武大超算进行MATLAB计算">
+<meta name="twitter:description" content="当有两个自变量和一个因变量需要进行可视化时，可以使用mesh命令绘制双变量的三维图。">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181210145259122.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="YuqingHe&#39;s mind" type="application/atom+xml">
   
@@ -196,11 +200,11 @@
 	</div>
 </nav>
       <div class="body-wrap">
-<article id="post-杂记" class="article article-type-post" itemscope="" itemprop="blogPost">
+<article id="post-MATLAB中如何实现mesh三维图" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/h22222222.github.io/2018/12/08/杂记/" class="article-date">
-  	<time datetime="2018-12-07T17:26:05.000Z" itemprop="datePublished">2018-12-07</time>
+      <a href="/h22222222.github.io/2018/12/08/MATLAB中如何实现mesh三维图/" class="article-date">
+  	<time datetime="2018-12-08T10:26:05.000Z" itemprop="datePublished">2018-12-08</time>
 </a>
     </div>
   
@@ -213,7 +217,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      杂记
+      如何正确优雅地使用武大超算进行MATLAB计算
       
     </h1>
   
@@ -223,7 +227,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/MATLAB/">MATLAB</a></li></ul>
 	</div>
 
         
@@ -235,7 +239,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有一天，你会发现，你之前选择的路，不一定就是最合适你的</p>
+        <p>当有两个自变量和一个因变量需要进行可视化时，可以使用mesh命令绘制双变量的三维图。<br><a id="more"></a></p>
+<h2 id="绘制三维图"><a href="#绘制三维图" class="headerlink" title="绘制三维图"></a>绘制三维图</h2><p>以下是MATLAB官网中对于mesh命令的解读：</p>
+<ol>
+<li>mesh(X,Y,Z)<br>mesh(X,Y,Z) 使用 Z 确定的颜色绘制线框网格，因此其颜色与曲面高度成比例，其中<strong>Z一定是矩阵，X,Y可以是矢量</strong>。如果 X 和 Y 为向量，length(X) = n 且 length(Y) = m，其中 [m,n] = size(Z)。在本示例中，(X(j), Y(i), Z(i,j)) 是线框网格线的交点；X 和 Y 分别对应于 Z 的列和行。如果 X 和 Y 为矩阵，则 (X(i,j), Y(i,j), Z(i,j)) 是线框网格线的交点。<strong>X、Y 或 Z 中的值可以是数值、日期时间值、持续时间值或分类值。</strong></li>
+</ol>
+<ol start="2">
+<li><p>mesh(Z)<br>mesh(Z) 使用 X = 1:n 和 Y = 1:m 绘制线框网格，其中 [m,n] = size(Z)。高度 Z 是在矩形网格上定义的单值函数。颜色与曲面高度成正比。Z 的值可以是数值、日期时间、持续时间或类别值。</p>
+<ol start="3">
+<li>mesh(…,C)<br>mesh(…,C) 使用矩阵 C 确定的颜色绘制线框网格。MATLAB® 对 C 中的数据执行线性转换，以便从当前颜色图获取颜色。如果 X、Y 和 Z 为矩阵，它们的大小必须与 C 相同。</li>
+</ol>
+</li>
+</ol>
+<p>举例：数据来自百度<br>x=[16 17.5 19 21 22 23.7];<br>y=[3 6 9 10 12];<br>z=[ 0.08    0.09    0.09    0.1    0.11    0.11;<br>0.04    0.05    0.06    0.08    0.1    0.15;<br>0.02    0.05    0.12    0.19    0.27    0.44;<br>0.03    0.06    0.2      0.35    0.46    0.62;<br>0.32    0.45    0.84    0.88    0.94    1.17];<br>figure;<br>mesh(x,y,z);  %两个自变量，一个因变量<br>xlabel(‘自变量1’);<br>ylabel(‘自变量2’);<br>zlabel(‘因变量Z’);<br><img src="https://img-blog.csdnimg.cn/20181210145259122.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>由于数据不够多，画出的图不是光滑，如果想让画出的曲面光滑一些，可以尝试使用griddata命令进行插值。<br>xx=linspace(16,23.7,100);%x是16到23.7的数列，长度为100，长度是可以随意调整的，越大越光滑<br>yy=linspace(3,12,100);%y是3到12的数列，长度为100<br>%数列长度可以根据改变，点数越多，数据点越密<br>zz=griddata(x,y,z,xx,yy’,’cubic’);%三次多项式插值计算<br>figure;<br>mesh(xx,yy,zz);<br>xlabel(‘自变量1’);<br>ylabel(‘自变量2’);<br>zlabel(‘因变量Z’);<br><img src="https://img-blog.csdnimg.cn/20181210145912903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="设置figure图的背景为白色"><a href="#设置figure图的背景为白色" class="headerlink" title="设置figure图的背景为白色"></a>设置figure图的背景为白色</h2><p>set(0,’defaultfigurecolor’,’w’) </p>
+<h2 id="调整视角"><a href="#调整视角" class="headerlink" title="调整视角"></a>调整视角</h2><p>使用view命令来更改三维图的视角<br>调用格式    含义<br>view(az,el)     给三维空间图形设置观察点的方位角az与仰角el<br>view([az,el])        同上<br>view([x,y,z])    将点(x,y,z)设置为视点<br>view(2)     设置默认的二维形式视点，其中az = 0,el = 90,即从z轴上方观看<br>view(3)    设置默认的三维形式视点，其中az = -37.5, ell = 30<br>[az,el]=view      返回当前的方位角az与仰角el<br>方位角是 x-y 平面中的极坐标角，正值表示按逆时针方向旋转视点。仰角是位于 x-y 平面上方的角度（正角度）或下方的角度（负角度）。<br><img src="https://img-blog.csdnimg.cn/20181210145725823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
       
     </div>
@@ -245,18 +263,18 @@
     
 <nav id="article-nav">
   
-    <a href="/h22222222.github.io/2018/12/08/读书笔记---《让未来现在就来，成为高效能的行动派》/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">&lt;</strong>
       <div class="article-nav-title">
         
-          读书笔记---《让未来现在就来，成为高效能的行动派》
+          如何正确优雅地使用武大超算进行MATLAB计算
         
       </div>
     </a>
   
   
-    <a href="/h22222222.github.io/2018/12/07/hexo+github搭建自己的博客debug/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo+github搭建自己的博客debug</div>
+    <a href="/h22222222.github.io/2018/12/08/读书笔记---《让未来现在就来，成为高效能的行动派》/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">读书笔记---《让未来现在就来，成为高效能的行动派》</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
