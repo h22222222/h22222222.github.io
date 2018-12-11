@@ -9,18 +9,18 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。% Purpose：Save intermediate variable values for nested loops% Programmer：YQH% Date:20181206clear all;tic;lamda1=[0:0.1:1];lamda2=1-lamda1;dip1=[70,80,90];  %idip2=[">
+  <meta name="description" content="思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。">
 <meta name="keywords" content="MATLAB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MATLAB中如何保存嵌套循环的中间变量值">
 <meta property="og:url" content="https://github.com/h22222222/h22222222.github.io/2018/12/06/MATLAB中如何保存嵌套循环的中间变量值/index.html">
 <meta property="og:site_name" content="YuqingHe&#39;s mind">
-<meta property="og:description" content="%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。% Purpose：Save intermediate variable values for nested loops% Programmer：YQH% Date:20181206clear all;tic;lamda1=[0:0.1:1];lamda2=1-lamda1;dip1=[70,80,90];  %idip2=[">
+<meta property="og:description" content="思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-11T12:32:38.698Z">
+<meta property="og:updated_time" content="2018-12-11T12:34:42.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MATLAB中如何保存嵌套循环的中间变量值">
-<meta name="twitter:description" content="%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。% Purpose：Save intermediate variable values for nested loops% Programmer：YQH% Date:20181206clear all;tic;lamda1=[0:0.1:1];lamda2=1-lamda1;dip1=[70,80,90];  %idip2=[">
+<meta name="twitter:description" content="思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。">
   
     <link rel="alternative" href="/atom.xml" title="YuqingHe&#39;s mind" type="application/atom+xml">
   
@@ -259,8 +259,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<p>%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。<br>% Purpose：Save intermediate variable values for nested loops<br>% Programmer：YQH<br>% Date:20181206<br>clear all;<br>tic;<br>lamda1=[0:0.1:1];<br>lamda2=1-lamda1;<br>dip1=[70,80,90];  %i<br>dip2=[70,80,90,100];  % j<br>kappa1=[20,24,25];<br>kappa2=[50,59,60,70];<br>l=length(lamda1);<br>a=length(dip1);<br>b=length(dip2);<br>g=length(kappa1);<br>h=length(kappa2);<br>total=l<em>a</em>b<em>g</em>h;</p>
+        <p>思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。<br><a id="more"></a><br>% Purpose：Save intermediate variable values for nested loops<br>% Programmer：YQH<br>% Date:20181206<br>clear all;<br>tic;<br>lamda1=[0:0.1:1];<br>lamda2=1-lamda1;<br>dip1=[70,80,90];  %i<br>dip2=[70,80,90,100];  % j<br>kappa1=[20,24,25];<br>kappa2=[50,59,60,70];<br>l=length(lamda1);<br>a=length(dip1);<br>b=length(dip2);<br>g=length(kappa1);<br>h=length(kappa2);<br>total=l<em>a</em>b<em>g</em>h;</p>
 <p>mil1=[];<br>result=[];  %预置的空矩阵<br>file=’results.mat’;<br>for i=1:a<br>    for j=1:b<br>        for k=1:g<br>            for m=1:h<br>                for n=1:l<br>                    mil1=dip1(i)<em>dip2(j)</em>kappa1(k)<em>kappa2(m)</em>lamda1(n)*lamda2(n);<br>                    result=[result dip1(i) dip2(j) kappa1(k) kappa2(m) mil1 ];<br>%                   save(file,’mil’,’-append’);  %可要可不要<br>                end<br>            end<br>        end<br>    end<br>end<br>result=result’;<br>result=reshape(result,5,total);<br>result=result’;<br>save(file,’result’);<br>toc</p>
 
       

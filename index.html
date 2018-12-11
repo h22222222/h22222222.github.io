@@ -672,10 +672,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<p>%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。<br>% Purpose：Save intermediate variable values for nested loops<br>% Programmer：YQH<br>% Date:20181206<br>clear all;<br>tic;<br>lamda1=[0:0.1:1];<br>lamda2=1-lamda1;<br>dip1=[70,80,90];  %i<br>dip2=[70,80,90,100];  % j<br>kappa1=[20,24,25];<br>kappa2=[50,59,60,70];<br>l=length(lamda1);<br>a=length(dip1);<br>b=length(dip2);<br>g=length(kappa1);<br>h=length(kappa2);<br>total=l<em>a</em>b<em>g</em>h;</p>
-<p>mil1=[];<br>result=[];  %预置的空矩阵<br>file=’results.mat’;<br>for i=1:a<br>    for j=1:b<br>        for k=1:g<br>            for m=1:h<br>                for n=1:l<br>                    mil1=dip1(i)<em>dip2(j)</em>kappa1(k)<em>kappa2(m)</em>lamda1(n)*lamda2(n);<br>                    result=[result dip1(i) dip2(j) kappa1(k) kappa2(m) mil1 ];<br>%                   save(file,’mil’,’-append’);  %可要可不要<br>                end<br>            end<br>        end<br>    end<br>end<br>result=result’;<br>result=reshape(result,5,total);<br>result=result’;<br>save(file,’result’);<br>toc</p>
-
+        <p>思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。<br></p>
       
     </div>
     
@@ -700,6 +697,10 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a href="/h22222222.github.io/2018/12/06/MATLAB中如何保存嵌套循环的中间变量值/#more">more >></a>
+        </p>
       
     
   </div>
@@ -743,26 +744,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<p>在进行MATLAB矩阵科学计算时，会用到以下命令，由于不是很熟悉，我将其总结记录如下：<br>Meshgrid生成二维网格，用法为：[x y]=meshgrid(a b);<br>% a 和b是一维数组，如a=[1 2 3]; b= [2 3 4]; 则生成的 X 和 Y 都是为 3X3 维的矩阵，</p>
-<blockquote>
-<blockquote>
-<p>[x y]=meshgrid(a,b)<br>x =<br>    1     2     3<br>    1     2     3<br>    1     2     3<br>y =<br>  2     2     2<br>  3     3     3<br>  4     4     4    </p>
-</blockquote>
-</blockquote>
-<p>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>flipud函数实现矩阵的上下翻转。如：flipud(A)实现了矩阵A的上下翻转。注意：区别于fliplr函数，该函数是实现矩阵的左右翻转。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>将Figure中的标题和图例中的下划线正确显示出来：<br>Figure；<br>plot(x,y)%绘图<br>title(strrep(str1,’<em>‘,’\</em>‘));<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>B = repmat(A,m,n)<br>将矩阵A复制m×n块，即把A作为B的元素，B由m×n个A平铺而成。B的维数是 [size(A,1)<em>m, size(A,2)</em>n] 。</p>
-<blockquote>
-<blockquote>
-<p>A =<br>1 2<br>3 4<br>B = repmat(A,2,3)<br>B =<br>1 2 1 2 1 2<br>3 4 3 4 3 4<br>1 2 1 2 1 2<br>3 4 3 4 3 4</p>
-</blockquote>
-</blockquote>
-<p>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>chol() 用于对矩阵进行Cholesky分解 假定X是正定的, R=chol(X)则产生一个上三角阵R,使R’R=X。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>out = blkdiag(a,b,c,d,…)（其中 a、b、c、d、… 均为矩阵）输出以下形式的分块对角矩阵<br><img src="https://img-blog.csdnimg.cn/20181117095311180.png" alt="在这里插入图片描述"><br>输入矩阵不必是方阵，其大小也不必相等。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>diag函数功能：矩阵对角元素的提取和创建对角阵</p>
-<blockquote>
-<blockquote>
-<p>aa =<br>   -1.3282   -1.7925    0.4092<br>   -0.3803    0.5858   -0.4684<br>   -0.9560    0.7356    0.8292<br>diag(aa)<br>ans =<br>   -1.3282<br>    0.5858<br>    0.8292<br>diag(aa,1)<br>ans =<br>   -1.7925<br>   -0.4684<br>diag(aa,2)<br>ans =<br>    0.4092</p>
-</blockquote>
-</blockquote>
-
+        <p>在进行MATLAB矩阵科学计算时，会用到以下命令，由于不是很熟悉，我将其总结记录如下。<br></p>
       
     </div>
     
@@ -787,6 +769,10 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a href="/h22222222.github.io/2018/11/17/MATLAB矩阵计算陌生命令总结（一）/#more">more >></a>
+        </p>
       
     
   </div>
