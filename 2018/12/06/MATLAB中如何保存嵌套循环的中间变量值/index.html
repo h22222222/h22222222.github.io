@@ -3,19 +3,24 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Tag: 读书笔记 | YuqingHe&#39;s mind</title>
+  <title>MATLAB中如何保存嵌套循环的中间变量值 | YuqingHe&#39;s mind</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YuqingHe&#39;s mind">
-<meta property="og:url" content="https://github.com/h22222222/h22222222.github.io/tags/读书笔记/index.html">
+  <meta name="description" content="%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。% Purpose：Save intermediate variable values for nested loops% Programmer：YQH% Date:20181206clear all;tic;lamda1=[0:0.1:1];lamda2=1-lamda1;dip1=[70,80,90];  %idip2=[">
+<meta name="keywords" content="MATLAB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MATLAB中如何保存嵌套循环的中间变量值">
+<meta property="og:url" content="https://github.com/h22222222/h22222222.github.io/2018/12/06/MATLAB中如何保存嵌套循环的中间变量值/index.html">
 <meta property="og:site_name" content="YuqingHe&#39;s mind">
+<meta property="og:description" content="%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。% Purpose：Save intermediate variable values for nested loops% Programmer：YQH% Date:20181206clear all;tic;lamda1=[0:0.1:1];lamda2=1-lamda1;dip1=[70,80,90];  %idip2=[">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-11T12:32:38.698Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YuqingHe&#39;s mind">
+<meta name="twitter:title" content="MATLAB中如何保存嵌套循环的中间变量值">
+<meta name="twitter:description" content="%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。% Purpose：Save intermediate variable values for nested loops% Programmer：YQH% Date:20181206clear all;tic;lamda1=[0:0.1:1];lamda2=1-lamda1;dip1=[70,80,90];  %idip2=[">
   
     <link rel="alternative" href="/atom.xml" title="YuqingHe&#39;s mind" type="application/atom+xml">
   
@@ -206,67 +211,90 @@
 	</div>
 </nav>
       <div class="body-wrap">
+<article id="post-MATLAB中如何保存嵌套循环的中间变量值" class="article article-type-post" itemscope="" itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/h22222222.github.io/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/h22222222.github.io/2018/12/08/读书笔记---《让未来现在就来，成为高效能的行动派》/" class="archive-article-date">
-  	<time datetime="2018-12-07T20:23:05.000Z" itemprop="datePublished">Dec 7</time>
+    <div class="article-meta">
+      <a href="/h22222222.github.io/2018/12/06/MATLAB中如何保存嵌套循环的中间变量值/" class="article-date">
+  	<time datetime="2018-12-06T09:26:05.000Z" itemprop="datePublished">2018-12-06</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/h22222222.github.io/2018/12/08/读书笔记---《让未来现在就来，成为高效能的行动派》/">
-        读书笔记---《让未来现在就来，成为高效能的行动派》
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
         
-          <span class="title-pop-out">[置顶]</span></a>
-        
+  
+    <h1 class="article-title" itemprop="name">
+      MATLAB中如何保存嵌套循环的中间变量值
       
     </h1>
   
 
-        <div class="article-info info-on-left">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/读书笔记/">读书笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/MATLAB/">MATLAB</a></li></ul>
 	</div>
 
-          
+        
 
+        
           
-            
 <div class="counter-tag counter">
-    <span id="/h22222222.github.io/2018/12/08/读书笔记---《让未来现在就来，成为高效能的行动派》/" class="leancloud_visitors post-title-link" style="font-size: 12px" data-flag-title="读书笔记---《让未来现在就来，成为高效能的行动派》">
+    <span id="/h22222222.github.io/2018/12/06/MATLAB中如何保存嵌套循环的中间变量值/" class="leancloud_visitors post-title-link" style="font-size: 12px" data-flag-title="MATLAB中如何保存嵌套循环的中间变量值">
          &nbsp;
         view
     </span>
 </div>
 
-          
-        </div>
+        
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<p>%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。<br>% Purpose：Save intermediate variable values for nested loops<br>% Programmer：YQH<br>% Date:20181206<br>clear all;<br>tic;<br>lamda1=[0:0.1:1];<br>lamda2=1-lamda1;<br>dip1=[70,80,90];  %i<br>dip2=[70,80,90,100];  % j<br>kappa1=[20,24,25];<br>kappa2=[50,59,60,70];<br>l=length(lamda1);<br>a=length(dip1);<br>b=length(dip2);<br>g=length(kappa1);<br>h=length(kappa2);<br>total=l<em>a</em>b<em>g</em>h;</p>
+<p>mil1=[];<br>result=[];  %预置的空矩阵<br>file=’results.mat’;<br>for i=1:a<br>    for j=1:b<br>        for k=1:g<br>            for m=1:h<br>                for n=1:l<br>                    mil1=dip1(i)<em>dip2(j)</em>kappa1(k)<em>kappa2(m)</em>lamda1(n)*lamda2(n);<br>                    result=[result dip1(i) dip2(j) kappa1(k) kappa2(m) mil1 ];<br>%                   save(file,’mil’,’-append’);  %可要可不要<br>                end<br>            end<br>        end<br>    end<br>end<br>result=result’;<br>result=reshape(result,5,total);<br>result=result’;<br>save(file,’result’);<br>toc</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/h22222222.github.io/2018/12/07/如何发布自己的文章到hexo博客上/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          如何发布自己的文章到hexo博客上
+        
+      </div>
+    </a>
+  
+  
+    <a href="/h22222222.github.io/2018/11/17/MATLAB矩阵计算陌生命令总结（一）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MATLAB矩阵计算陌生命令总结（一）</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
 
 </div>
       	  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -296,9 +324,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true
 	}

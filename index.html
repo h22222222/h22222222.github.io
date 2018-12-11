@@ -145,7 +145,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/h22222222.github.io/tags/MATLAB/" style="font-size: 20px;">MATLAB</a> <a href="/h22222222.github.io/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/h22222222.github.io/tags/读书笔记/" style="font-size: 10px;">读书笔记</a> <a href="/h22222222.github.io/tags/超算/" style="font-size: 10px;">超算</a> <a href="/h22222222.github.io/tags/随笔/" style="font-size: 20px;">随笔</a>
+						<a href="/h22222222.github.io/tags/InSAR/" style="font-size: 15px;">InSAR</a> <a href="/h22222222.github.io/tags/MATLAB/" style="font-size: 20px;">MATLAB</a> <a href="/h22222222.github.io/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/h22222222.github.io/tags/卫星数据/" style="font-size: 15px;">卫星数据</a> <a href="/h22222222.github.io/tags/读书笔记/" style="font-size: 10px;">读书笔记</a> <a href="/h22222222.github.io/tags/超算/" style="font-size: 10px;">超算</a> <a href="/h22222222.github.io/tags/随笔/" style="font-size: 15px;">随笔</a>
 					</div>
 				</section>
 				
@@ -629,6 +629,306 @@
         <p class="article-more-link">
           <a href="/h22222222.github.io/2018/12/07/如何发布自己的文章到hexo博客上/#more">more >></a>
         </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    
+<article id="post-MATLAB中如何保存嵌套循环的中间变量值" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/h22222222.github.io/2018/12/06/MATLAB中如何保存嵌套循环的中间变量值/" class="article-date">
+  	<time datetime="2018-12-06T09:26:05.000Z" itemprop="datePublished">2018-12-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/h22222222.github.io/2018/12/06/MATLAB中如何保存嵌套循环的中间变量值/">
+        MATLAB中如何保存嵌套循环的中间变量值
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<p>%思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。<br>% Purpose：Save intermediate variable values for nested loops<br>% Programmer：YQH<br>% Date:20181206<br>clear all;<br>tic;<br>lamda1=[0:0.1:1];<br>lamda2=1-lamda1;<br>dip1=[70,80,90];  %i<br>dip2=[70,80,90,100];  % j<br>kappa1=[20,24,25];<br>kappa2=[50,59,60,70];<br>l=length(lamda1);<br>a=length(dip1);<br>b=length(dip2);<br>g=length(kappa1);<br>h=length(kappa2);<br>total=l<em>a</em>b<em>g</em>h;</p>
+<p>mil1=[];<br>result=[];  %预置的空矩阵<br>file=’results.mat’;<br>for i=1:a<br>    for j=1:b<br>        for k=1:g<br>            for m=1:h<br>                for n=1:l<br>                    mil1=dip1(i)<em>dip2(j)</em>kappa1(k)<em>kappa2(m)</em>lamda1(n)*lamda2(n);<br>                    result=[result dip1(i) dip2(j) kappa1(k) kappa2(m) mil1 ];<br>%                   save(file,’mil’,’-append’);  %可要可不要<br>                end<br>            end<br>        end<br>    end<br>end<br>result=result’;<br>result=reshape(result,5,total);<br>result=result’;<br>save(file,’result’);<br>toc</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/MATLAB/">MATLAB</a></li></ul>
+	</div>
+
+      
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/h22222222.github.io/2018/12/06/MATLAB中如何保存嵌套循环的中间变量值/" class="leancloud_visitors post-title-link" style="font-size: 12px" data-flag-title="MATLAB中如何保存嵌套循环的中间变量值">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    
+<article id="post-MATLAB矩阵计算陌生命令总结（一）" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/h22222222.github.io/2018/11/17/MATLAB矩阵计算陌生命令总结（一）/" class="article-date">
+  	<time datetime="2018-11-17T09:26:05.000Z" itemprop="datePublished">2018-11-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/h22222222.github.io/2018/11/17/MATLAB矩阵计算陌生命令总结（一）/">
+        MATLAB矩阵计算陌生命令总结（一）
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<p>在进行MATLAB矩阵科学计算时，会用到以下命令，由于不是很熟悉，我将其总结记录如下：<br>Meshgrid生成二维网格，用法为：[x y]=meshgrid(a b);<br>% a 和b是一维数组，如a=[1 2 3]; b= [2 3 4]; 则生成的 X 和 Y 都是为 3X3 维的矩阵，</p>
+<blockquote>
+<blockquote>
+<p>[x y]=meshgrid(a,b)<br>x =<br>    1     2     3<br>    1     2     3<br>    1     2     3<br>y =<br>  2     2     2<br>  3     3     3<br>  4     4     4    </p>
+</blockquote>
+</blockquote>
+<p>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>flipud函数实现矩阵的上下翻转。如：flipud(A)实现了矩阵A的上下翻转。注意：区别于fliplr函数，该函数是实现矩阵的左右翻转。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>将Figure中的标题和图例中的下划线正确显示出来：<br>Figure；<br>plot(x,y)%绘图<br>title(strrep(str1,’<em>‘,’\</em>‘));<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>B = repmat(A,m,n)<br>将矩阵A复制m×n块，即把A作为B的元素，B由m×n个A平铺而成。B的维数是 [size(A,1)<em>m, size(A,2)</em>n] 。</p>
+<blockquote>
+<blockquote>
+<p>A =<br>1 2<br>3 4<br>B = repmat(A,2,3)<br>B =<br>1 2 1 2 1 2<br>3 4 3 4 3 4<br>1 2 1 2 1 2<br>3 4 3 4 3 4</p>
+</blockquote>
+</blockquote>
+<p>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>chol() 用于对矩阵进行Cholesky分解 假定X是正定的, R=chol(X)则产生一个上三角阵R,使R’R=X。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>out = blkdiag(a,b,c,d,…)（其中 a、b、c、d、… 均为矩阵）输出以下形式的分块对角矩阵<br><img src="https://img-blog.csdnimg.cn/20181117095311180.png" alt="在这里插入图片描述"><br>输入矩阵不必是方阵，其大小也不必相等。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>diag函数功能：矩阵对角元素的提取和创建对角阵</p>
+<blockquote>
+<blockquote>
+<p>aa =<br>   -1.3282   -1.7925    0.4092<br>   -0.3803    0.5858   -0.4684<br>   -0.9560    0.7356    0.8292<br>diag(aa)<br>ans =<br>   -1.3282<br>    0.5858<br>    0.8292<br>diag(aa,1)<br>ans =<br>   -1.7925<br>   -0.4684<br>diag(aa,2)<br>ans =<br>    0.4092</p>
+</blockquote>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/MATLAB/">MATLAB</a></li></ul>
+	</div>
+
+      
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/h22222222.github.io/2018/11/17/MATLAB矩阵计算陌生命令总结（一）/" class="leancloud_visitors post-title-link" style="font-size: 12px" data-flag-title="MATLAB矩阵计算陌生命令总结（一）">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    
+<article id="post-Sentinel-1精轨数据下载（排雷）" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/h22222222.github.io/2018/11/01/Sentinel-1精轨数据下载（排雷）/" class="article-date">
+  	<time datetime="2018-11-01T09:26:05.000Z" itemprop="datePublished">2018-11-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/h22222222.github.io/2018/11/01/Sentinel-1精轨数据下载（排雷）/">
+        Sentinel-1精轨数据下载（排雷）
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>轨道信息是InSAR数据处理中非常重要的信息，从最初的图像配准到最后的形变图像生成都有着重要的作用。含有误差的轨道信息造成基线误差以残差条纹的形式存在于干涉图中。因此，使用卫星精密轨道数据对轨道信息进行修正，可有效去除因轨道误差引起的系统性误差。**<br></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/InSAR/">InSAR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/卫星数据/">卫星数据</a></li></ul>
+	</div>
+
+      
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/h22222222.github.io/2018/11/01/Sentinel-1精轨数据下载（排雷）/" class="leancloud_visitors post-title-link" style="font-size: 12px" data-flag-title="Sentinel-1精轨数据下载（排雷）">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a href="/h22222222.github.io/2018/11/01/Sentinel-1精轨数据下载（排雷）/#more">more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    
+<article id="post-Sentinel-1A卫星数据下载" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/h22222222.github.io/2018/10/12/Sentinel-1A卫星数据下载/" class="article-date">
+  	<time datetime="2018-10-12T11:18:05.000Z" itemprop="datePublished">2018-10-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/h22222222.github.io/2018/10/12/Sentinel-1A卫星数据下载/">
+        MATLAB中如何实现mesh三维图
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Sentinel-1A卫星于2014年4月3日发射升空，是欧洲空间局哥白尼计划发射的首颗环境监测卫星。经过一年左右的调试和预运行，在2015年4月至5月期间，该卫星开始稳定运行，采用12天的重访周期进行全球成像，Sentinel-1B也于2016年4月25号成功发射。届时两颗卫星同时运行，将观测效率提高一倍，缩短为6天。欧洲空间局对卫星数据实施免费开放政策，这极大地推动了InSAR技术在国内的发展与应用。</p>
+<p>下载网址：哨兵科学数据中心（Sentinels Scientific Data Hub）<br>数据下载网址：<a href="https://scihub.copernicus.eu/（也有说法：https://scihub.esa.int，但是网站无法打开），用来查询和下载Sentinel系列卫星数据。" target="_blank" rel="noopener">https://scihub.copernicus.eu/（也有说法：https://scihub.esa.int，但是网站无法打开），用来查询和下载Sentinel系列卫星数据。</a><br>（1）访问网址，进入网址首页。<br><img src="https://img-blog.csdn.net/20181012111233104?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>（2）点击Open Hub进入数据查询页面。<br><img src="https://img-blog.csdn.net/20181012111314338?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>（3）注册并登录，在查询窗口输入感兴趣区域名称和数据类型或者先绘制感兴趣区域后在搜索框中输入要下载的数据类型进行查询（干涉数据查询时，绘制感兴趣区域要尽量小，避免出现多轨道数据查询结果。下载多景数据进行干涉叠加处理时，需按照同一轨道且重访周期12天及12天的倍数进行数据下载）。<br><img src="https://img-blog.csdn.net/20181012111410376?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>（4）做DnSAR处理时，干涉像对应当尽量选取时间和空间基线都较短的，以保证较好的干涉效果。点击Add Product to Cart将需要的数据添加到右侧Cart中。右侧的五个图标分别代表“select product”、“zoom to product”、“view product details（显示SLC影像的详细）”、“remove product from cart”及“download product”。<br><img src="https://img-blog.csdn.net/20181012111510330?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdn.net/20181012111521280?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdn.net/20181012111534763?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>（5）确定需要的SLC像对之后点击下载，由于单个数据的大小都在6G以上，所以需要一个较大的内存空间，可在硬盘中下载，下载时间大约两个小时这样。<br>附：<br>哨兵1A数据类型：<br>SM SLC ——条带模式的斜距单视复数产品<br>IW SLC——干涉宽幅模式（TOPS Mode）的斜距单视复数产品<br>EW SLC——超宽幅模式（TOPS Mode）的斜距单视复数产品<br>SM GRD——条带模式的地距多视产品<br>IW GRD——干涉宽幅模式（TOPS Mode）的地距多视产品<br>EW GRD——超宽幅模式（TOPS Mode）的地距多视产品</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/InSAR/">InSAR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/h22222222.github.io/tags/卫星数据/">卫星数据</a></li></ul>
+	</div>
+
+      
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/h22222222.github.io/2018/10/12/Sentinel-1A卫星数据下载/" class="leancloud_visitors post-title-link" style="font-size: 12px" data-flag-title="MATLAB中如何实现mesh三维图">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
       
     
   </div>
