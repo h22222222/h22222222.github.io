@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/h22222222.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/h22222222.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/h22222222.github.io/css/main.css?v=" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/h22222222.github.io/images/apple-touch-icon-next.png?v=">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/h22222222.github.io/images/favicon-32x32-next.png?v=">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/h22222222.github.io/images/favicon-16x16-next.png?v=">
+
+
+  <link rel="mask-icon" href="/h22222222.github.io/images/logo.svg?v=" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="MATLAB,超算,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="最近总会跑一些计算量大的matlab程序，然后PC就是灾难现场了，不仅风扇转个不停，声音巨大，而且基本上是不敢再开其他的应用了，cpu占用率惊人，加速球变红…（此时应该有捂脸的表情）这样折腾了几天之后，发现不行，对电脑的伤害太大了，虽然说，电脑就是用来用的，但是也还是得稍微珍惜一下的。之后我就想到了我们学校的超算中心，这么好的资源，不用白不用。于是我就开始了自己的探索过程。">
+<meta name="keywords" content="MATLAB,超算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何正确优雅地使用武大超算进行MATLAB计算">
+<meta property="og:url" content="https://github.com/h22222222/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/index.html">
+<meta property="og:site_name" content="YuqingHe&#39;s mind">
+<meta property="og:description" content="最近总会跑一些计算量大的matlab程序，然后PC就是灾难现场了，不仅风扇转个不停，声音巨大，而且基本上是不敢再开其他的应用了，cpu占用率惊人，加速球变红…（此时应该有捂脸的表情）这样折腾了几天之后，发现不行，对电脑的伤害太大了，虽然说，电脑就是用来用的，但是也还是得稍微珍惜一下的。之后我就想到了我们学校的超算中心，这么好的资源，不用白不用。于是我就开始了自己的探索过程。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图1.png">
+<meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图2.png">
+<meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图3.png">
+<meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图4.png">
+<meta property="og:updated_time" content="2018-12-15T01:29:40.852Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何正确优雅地使用武大超算进行MATLAB计算">
+<meta name="twitter:description" content="最近总会跑一些计算量大的matlab程序，然后PC就是灾难现场了，不仅风扇转个不停，声音巨大，而且基本上是不敢再开其他的应用了，cpu占用率惊人，加速球变红…（此时应该有捂脸的表情）这样折腾了几天之后，发现不行，对电脑的伤害太大了，虽然说，电脑就是用来用的，但是也还是得稍微珍惜一下的。之后我就想到了我们学校的超算中心，这么好的资源，不用白不用。于是我就开始了自己的探索过程。">
+<meta name="twitter:image" content="https://github.com/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/h22222222.github.io/',
+    scheme: 'Muse',
+    version: '',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/h22222222/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/">
+
+
+
+
+
+  <title>如何正确优雅地使用武大超算进行MATLAB计算 | YuqingHe's mind</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/h22222222.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YuqingHe's mind</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">choose,desire,be</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/h22222222.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/h22222222.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/h22222222/h22222222.github.io/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YuqingHe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/h22222222.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuqingHe's mind">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何正确优雅地使用武大超算进行MATLAB计算</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-08T18:26:05+08:00">
+                2018-12-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近总会跑一些计算量大的matlab程序，然后PC就是灾难现场了，不仅风扇转个不停，声音巨大，而且基本上是不敢再开其他的应用了，cpu占用率惊人，加速球变红…（此时应该有捂脸的表情）这样折腾了几天之后，发现不行，对电脑的伤害太大了，虽然说，电脑就是用来用的，但是也还是得稍微珍惜一下的。<br>之后我就想到了我们学校的超算中心，这么好的资源，不用白不用。于是我就开始了自己的探索过程。<br><a id="more"></a></p>
+<h2 id="1，进入武汉大学超算中心的网站"><a href="#1，进入武汉大学超算中心的网站" class="headerlink" title="1，进入武汉大学超算中心的网站"></a>1，进入武汉大学超算中心的网站</h2><p><a href="http://hpc.whu.edu.cn/" target="_blank" rel="noopener">http://hpc.whu.edu.cn/</a><br><img src="/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图1.png"><br>申请账号什么的就不说了，都是老腊肉了。</p>
+<h2 id="2，点击进入快速入门"><a href="#2，点击进入快速入门" class="headerlink" title="2，点击进入快速入门"></a>2，点击进入快速入门</h2><img src="/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图2.png">
+<p>在快速入门中你将会看到一个简易的使用手册，告诉你如何连接到超算中心。<br>工欲善其事，必先利其器，能够连接到超算中心计算机的工具：<br>Putty：优点：开源，免费。<br>FileZilla：用于文件传输。优点：开源，免费。<br>Xmanager：商业软件，功能强大，带图形服务（X Server），整合文件传输。<br>入门教程是以Putty和FileZilla为例进行讲解的，这两个软件都是可以直接在官网上免费下载的。<br>基本上，Putty主要是用来提交作业的，filezilla 的作用是上传或下载文件到超算。<br>当然，提醒小伙伴们，提交作业的命令都是在Linux系统下完成的，所以还是得有一些基本的Linux操作的知识储备的哈。按照入门教程走一遍之后你就大致掌握了如何连接到超算，如何上传作业了，如何查看队列了。</p>
+<h2 id="3，MATLAB-MDCS使用指南"><a href="#3，MATLAB-MDCS使用指南" class="headerlink" title="3，MATLAB MDCS使用指南"></a>3，MATLAB MDCS使用指南</h2><img src="/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图3.png">
+<p>超算中心的MATLAB软件存放在指定的目录下，在用的时候需要用到matlab_mdcs_slurm.sh文件并且需要修改一些参数来更好地运行你的程序。<br>1.拷贝/home/software/MATLAB/MDCS/matlab_mdcs_slurm.sh至您的工作目录下</p>
+<p>2.编辑matlab_mdcs_slurm.sh，自定义以下参数：</p>
+<p>#需要计算的m文件所在目录<br>eg：work_dir=”/data/xinming/examples/matlab-jobs/”</p>
+<p>#需要计算的m文件名，不需要加.m后缀<br>eg：mfile=”name_of_m_file”</p>
+<p>#用于计算的Task数量<br>eg：ntasks=15</p>
+<p>#SLURM分区名<br>eg：partition=”hpxg”</p>
+<p>#保存结果至mat文件<br>eg：save_mat=”mfile.mat”</p>
+<p>#是否开启Matlab警告提示<br>eg：warning=”off”</p>
+<p>#填写账号（就是你申请下来的账号，美元符号别删除哦~）<br>eg：account=”$USER”<br>脚本下半部分的内容一定不可以更改哦！</p>
+<p>3.提交MATLAB MDCS作业（当然是要到你放matlab_mdcs_slurm.sh的工作目录下提交哦~）<br>$ ./matlab_mdcs_slurm.sh<br>提交之后会出来一大堆的内容，大致是显示一些基本参数之类的，有需要就看看，没需要的话就可以忙自己的其他事去了。</p>
+<p>4.查询作业情况<br>$ squeue</p>
+<p>以这种格式的查询结果：<br>JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)<br><strong><em>**</em></strong>      <strong><strong>    </strong></strong>     <strong><strong>  R      10:08      1 **</strong></strong></p>
+<p>之后如果没有报错，就可以一直放在那等着它算完，算完之后是不会有提示或者什么命令行显示的，看到你的目录下有结果文件生成了，就是算完了。</p>
+<p>#################################################################</p>
+<p>#################################################################<br>如果遇到这种错误：<br><img src="/h22222222.github.io/2018/12/08/如何正确优雅地使用武大超算进行MATLAB计算/图4.png"><br>那你就需要检查一下你的MATLAB文件的目录、文件名有没有中文，或者是matlab_mdcs_slurm.sh脚本中有中文的全角符号存在，这时候需要把中文都改成英文，符号改成半角符号就OK啦！</p>
+<p><strong><em>超算是个好东西，趁还在学校，赶紧用起来啊骚年！</em></strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="图片链接或图片相对路径" alt="YuqingHe 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="图片链接或图片相对路径" alt="YuqingHe 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/h22222222.github.io/tags/MATLAB/" rel="tag"># MATLAB</a>
+          
+            <a href="/h22222222.github.io/tags/超算/" rel="tag"># 超算</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/h22222222.github.io/2018/12/08/读书笔记---《让未来现在就来，成为高效能的行动派》/" rel="next" title="读书笔记---《让未来现在就来，成为高效能的行动派》">
+                <i class="fa fa-chevron-left"></i> 读书笔记---《让未来现在就来，成为高效能的行动派》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/h22222222.github.io/2018/12/10/MATLAB中如何实现mesh三维图/" rel="prev" title="MATLAB中如何实现mesh三维图">
+                MATLAB中如何实现mesh三维图 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YuqingHe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/h22222222.github.io/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1，进入武汉大学超算中心的网站"><span class="nav-number">1.</span> <span class="nav-text">1，进入武汉大学超算中心的网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2，点击进入快速入门"><span class="nav-number">2.</span> <span class="nav-text">2，点击进入快速入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3，MATLAB-MDCS使用指南"><span class="nav-number">3.</span> <span class="nav-text">3，MATLAB MDCS使用指南</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YuqingHe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/h22222222.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/h22222222.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/h22222222.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/h22222222.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/h22222222.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/h22222222.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/h22222222.github.io/js/src/utils.js?v="></script>
+
+  <script type="text/javascript" src="/h22222222.github.io/js/src/motion.js?v="></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/h22222222.github.io/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/h22222222.github.io/js/src/post-details.js?v="></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/h22222222.github.io/js/src/bootstrap.js?v="></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/h22222222.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
