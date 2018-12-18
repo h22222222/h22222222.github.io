@@ -4,6 +4,9 @@
     <title><![CDATA[下一站珞珈山]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F12%2F15%2F%E4%B8%8B%E4%B8%80%E7%AB%99%E7%8F%9E%E7%8F%88%E5%B1%B1%2F</url>
     <content type="text"><![CDATA[modified by 房东的猫《下一站茶山刘》时间像 武汉三月樱花雨一瞬间 缤纷了珞珈四季仿佛 一切都还在原地谈笑间 却多了分离终于这一天来临我们要各奔东西那么这一餐去星湖还是小潘的店伤感的话不用说忧愁的泪不用流请往前走 不要回头信息学部的大循环在湖滨总会涌上很多人但那拥堵的n小时是最美丽的虚度年华跑不完的九一二也会有别人走过你我的印记呀如果世界真那么大我想从这里出发自强门外的流浪猫从不拒绝你递来的火腿呀打印店里的小窝中偶尔住着它们一家那几个拼命的考试周也成为往后说来就笑的珍藏啦窦哥给予的嘱托早已写进心底啦岁月催促人长大匆忙的脚步早已停不下还没说完的话 就算了吧总有些遗憾要学会放下前路不需太重的行囊和过去和解吧我会像永远不变的时光一如既往归来仍是一珞珈少年写于2018年12月12日]]></content>
+      <categories>
+        <category>生活小记</category>
+      </categories>
       <tags>
         <tag>随笔</tag>
       </tags>
@@ -12,6 +15,9 @@
     <title><![CDATA[MATLAB中如何实现mesh三维图]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F12%2F10%2FMATLAB%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0mesh%E4%B8%89%E7%BB%B4%E5%9B%BE%2F</url>
     <content type="text"><![CDATA[当有两个自变量和一个因变量需要进行可视化时，可以使用mesh命令绘制双变量的三维图。 绘制三维图以下是MATLAB官网中对于mesh命令的解读： mesh(X,Y,Z)mesh(X,Y,Z) 使用 Z 确定的颜色绘制线框网格，因此其颜色与曲面高度成比例，其中Z一定是矩阵，X,Y可以是矢量。如果 X 和 Y 为向量，length(X) = n 且 length(Y) = m，其中 [m,n] = size(Z)。在本示例中，(X(j), Y(i), Z(i,j)) 是线框网格线的交点；X 和 Y 分别对应于 Z 的列和行。如果 X 和 Y 为矩阵，则 (X(i,j), Y(i,j), Z(i,j)) 是线框网格线的交点。X、Y 或 Z 中的值可以是数值、日期时间值、持续时间值或分类值。 mesh(Z)mesh(Z) 使用 X = 1:n 和 Y = 1:m 绘制线框网格，其中 [m,n] = size(Z)。高度 Z 是在矩形网格上定义的单值函数。颜色与曲面高度成正比。Z 的值可以是数值、日期时间、持续时间或类别值。 mesh(…,C)mesh(…,C) 使用矩阵 C 确定的颜色绘制线框网格。MATLAB® 对 C 中的数据执行线性转换，以便从当前颜色图获取颜色。如果 X、Y 和 Z 为矩阵，它们的大小必须与 C 相同。 举例：数据来自百度x=[16 17.5 19 21 22 23.7];y=[3 6 9 10 12];z=[ 0.08 0.09 0.09 0.1 0.11 0.11;0.04 0.05 0.06 0.08 0.1 0.15;0.02 0.05 0.12 0.19 0.27 0.44;0.03 0.06 0.2 0.35 0.46 0.62;0.32 0.45 0.84 0.88 0.94 1.17];figure;mesh(x,y,z); %两个自变量，一个因变量xlabel(‘自变量1’);ylabel(‘自变量2’);zlabel(‘因变量Z’);由于数据不够多，画出的图不是光滑，如果想让画出的曲面光滑一些，可以尝试使用griddata命令进行插值。xx=linspace(16,23.7,100);%x是16到23.7的数列，长度为100，长度是可以随意调整的，越大越光滑yy=linspace(3,12,100);%y是3到12的数列，长度为100%数列长度可以根据改变，点数越多，数据点越密zz=griddata(x,y,z,xx,yy’,’cubic’);%三次多项式插值计算figure;mesh(xx,yy,zz);xlabel(‘自变量1’);ylabel(‘自变量2’);zlabel(‘因变量Z’); 设置figure图的背景为白色set(0,’defaultfigurecolor’,’w’) 调整视角使用view命令来更改三维图的视角调用格式 含义view(az,el) 给三维空间图形设置观察点的方位角az与仰角elview([az,el]) 同上view([x,y,z]) 将点(x,y,z)设置为视点view(2) 设置默认的二维形式视点，其中az = 0,el = 90,即从z轴上方观看view(3) 设置默认的三维形式视点，其中az = -37.5, ell = 30[az,el]=view 返回当前的方位角az与仰角el方位角是 x-y 平面中的极坐标角，正值表示按逆时针方向旋转视点。仰角是位于 x-y 平面上方的角度（正角度）或下方的角度（负角度）。]]></content>
+      <categories>
+        <category>我爱MATLAB</category>
+      </categories>
       <tags>
         <tag>MATLAB</tag>
       </tags>
@@ -20,6 +26,9 @@
     <title><![CDATA[如何正确优雅地使用武大超算进行MATLAB计算]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F12%2F08%2F%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BC%98%E9%9B%85%E5%9C%B0%E4%BD%BF%E7%94%A8%E6%AD%A6%E5%A4%A7%E8%B6%85%E7%AE%97%E8%BF%9B%E8%A1%8CMATLAB%E8%AE%A1%E7%AE%97%2F</url>
     <content type="text"><![CDATA[最近总会跑一些计算量大的matlab程序，然后PC就是灾难现场了，不仅风扇转个不停，声音巨大，而且基本上是不敢再开其他的应用了，cpu占用率惊人，加速球变红…（此时应该有捂脸的表情）这样折腾了几天之后，发现不行，对电脑的伤害太大了，虽然说，电脑就是用来用的，但是也还是得稍微珍惜一下的。之后我就想到了我们学校的超算中心，这么好的资源，不用白不用。于是我就开始了自己的探索过程。 1，进入武汉大学超算中心的网站http://hpc.whu.edu.cn/申请账号什么的就不说了，都是老腊肉了。 2，点击进入快速入门 在快速入门中你将会看到一个简易的使用手册，告诉你如何连接到超算中心。工欲善其事，必先利其器，能够连接到超算中心计算机的工具：Putty：优点：开源，免费。FileZilla：用于文件传输。优点：开源，免费。Xmanager：商业软件，功能强大，带图形服务（X Server），整合文件传输。入门教程是以Putty和FileZilla为例进行讲解的，这两个软件都是可以直接在官网上免费下载的。基本上，Putty主要是用来提交作业的，filezilla 的作用是上传或下载文件到超算。当然，提醒小伙伴们，提交作业的命令都是在Linux系统下完成的，所以还是得有一些基本的Linux操作的知识储备的哈。按照入门教程走一遍之后你就大致掌握了如何连接到超算，如何上传作业了，如何查看队列了。 3，MATLAB MDCS使用指南 超算中心的MATLAB软件存放在指定的目录下，在用的时候需要用到matlab_mdcs_slurm.sh文件并且需要修改一些参数来更好地运行你的程序。1.拷贝/home/software/MATLAB/MDCS/matlab_mdcs_slurm.sh至您的工作目录下 2.编辑matlab_mdcs_slurm.sh，自定义以下参数： #需要计算的m文件所在目录eg：work_dir=”/data/xinming/examples/matlab-jobs/” #需要计算的m文件名，不需要加.m后缀eg：mfile=”name_of_m_file” #用于计算的Task数量eg：ntasks=15 #SLURM分区名eg：partition=”hpxg” #保存结果至mat文件eg：save_mat=”mfile.mat” #是否开启Matlab警告提示eg：warning=”off” #填写账号（就是你申请下来的账号，美元符号别删除哦~）eg：account=”$USER”脚本下半部分的内容一定不可以更改哦！ 3.提交MATLAB MDCS作业（当然是要到你放matlab_mdcs_slurm.sh的工作目录下提交哦~）$ ./matlab_mdcs_slurm.sh提交之后会出来一大堆的内容，大致是显示一些基本参数之类的，有需要就看看，没需要的话就可以忙自己的其他事去了。之后如果没有报错，就可以一直放在那等着它算完，算完之后是不会有提示或者什么命令行显示的，看到你的目录下有结果文件生成了，就是算完了。 4.查询作业情况$ squeue 返回以这种格式的查询结果：JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)** R 10:08 1 **其中 JOBID 表示任务 ID，Name 表示任务名称，USER 为用户，TIME 为已 运行时间，NODES 表示占用结点数，NODELIST 为任务运行的结点列表。 5.取消任务$ scancel JOBID ################################################################# #################################################################如果遇到这种错误：那你就需要检查一下你的MATLAB文件的目录、文件名有没有中文，或者是matlab_mdcs_slurm.sh脚本中有中文的全角符号存在，这时候需要把中文都改成英文，符号改成半角符号就OK啦！需要提醒的一点就是，武大超算免费用户只有16核，如果你提交的作业总共超过16核就会有如下提示：检查发现我的一个MATLAB作业就已经用了15核，所以两个作业必然是超过的，所以下次如果需要提交多个作业的时候，一定要注意更改MATLAB作业上的核数，合理分配资源。在matlab_mdcs_slurm.sh文件中修改这个部分就可以了 超算是个好东西，趁还在学校，赶紧用起来啊骚年！]]></content>
+      <categories>
+        <category>我爱MATLAB</category>
+      </categories>
       <tags>
         <tag>MATLAB</tag>
         <tag>超算</tag>
@@ -29,6 +38,9 @@
     <title><![CDATA[读书笔记---《让未来现在就来，成为高效能的行动派》]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F12%2F08%2F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0---%E3%80%8A%E8%AE%A9%E6%9C%AA%E6%9D%A5%E7%8E%B0%E5%9C%A8%E5%B0%B1%E6%9D%A5%EF%BC%8C%E6%88%90%E4%B8%BA%E9%AB%98%E6%95%88%E8%83%BD%E7%9A%84%E8%A1%8C%E5%8A%A8%E6%B4%BE%E3%80%8B%2F</url>
     <content type="text"><![CDATA[这是一个到处都充斥着鸡汤的时代，它们往往会先抛出一个痛点，再描绘一个解决了这个问题之后的美好世界，但是具体到最重要的部分，怎么做就往往一笔带过了。很少能提供解决方法的，无非就是在强调要坚持，只要坚持就一定会成功。但是，并不是这样的，如果你走错了方向，用错了方法，就算坚持，也不一定会达到真正的目标。 如何高效地管理时间首先需要知道，一个人的时间管理状态可以分为三个阶段：1、很闲，就是生活里只有那么几件事，所以你不是没有时间，你是太闲了，你之所以一再徘徊不前，是因为给自己下了“不改变”的决心而已；2、很忙，觉得自己有很多东西要学，忙忙碌碌的，你便进入了学习模式，你需要在生活、学习、工作中找到平衡点，学会记录自己的时间，搞清楚自己的时间占用比例；3、有选择性地去忙，只做成效高的事情，进入学习+分享模式，利用块状的时间做高成效的事物，断舍离低效的事物。 关于拖延1、我们都是口是心非比如我们都觉得应该少玩手机，多利用碎片时间来看书，而我们制定的计划都是为了满足未来的我，而手机微博朋友圈，才能满足当下的我。2、人是理性的，但是我们的大脑是从动物进化而来，所以我们的行动又往往屈从于动物的本能。亚里士多德提出了一个哲学问题：意志薄弱，也就是我们明明知道这样做对自己有利，但是偏偏不不做的神秘现象。ORZ3、结构拖延法原著：斯坦福 约翰 .佩里 《拖拉一点也无妨》就是将你最想做的事情但是又最难的事情放在你的事物清单的第一位上，通过来做清单上其他不是很紧要的事情来避免最难的事情，但同时，你也做完其他也要做的事情，看起来像是在和自己打心理战，但总比自己啥也没做刷了一下午手机要好得多。4、吞青蛙原著：博恩 .崔西 《吃掉那只青蛙》找出你一天，一周，一个月内，甚至是一年，一生中最重要的三件事，他们就是你必须吃掉的三只青蛙，利用帕累托定理，每天花百分之二十的时间，集中精力，专门对付这三只青蛙。重度拖延症患者可以试试这个方法，在豆瓣和简书上也有很多这样的吞青蛙小组，可以互相监督，帮助养成好习惯。 如何构建自己的知识体系这里可以借助逆向的西蒙.斯涅克的黄金圈法则来阐述这个问题：why—how—what 为什么学？ 知识能够给人价值，价值又体现在资源、人脉、金钱、自信。 怎么学？ 在工作中学习，积累处理工作任务，与人沟通，也可以学习同事之间的优秀做事技巧和方式。在工作外学习，大块的时间用来专注一件事，零碎的时间用来看些tips。教是最好的学习，实现90%的知识转化，分享是最好的方式。 学什么？ 原著：田志刚《你的知识需要管理》可以多个领域一起玩，也需要选中其中一个方向走下去，持之以恒，对于自己不擅长的知识，你需要知道谁最擅长，争取得到别人的帮助。水平最高的人不是方方面面都最高，而是他们知道自己的优势所在，充分发挥自己的优势，紧密和同伴协作。 怎么创新？ 当我们构建起了自己的知识体系之后，创新便是在这个知识体系的各个模块跨界组合。创新源自我们已知的世界，你的知识体系越健壮，越丰满，越经常更新，创新就会是一件小事了。 #################################################结束语：小六的这本书非常清新脱俗，提到了很多有效的方法，这里只是我整理的一部分内容，书中还有一些关于思维导图、个人管理的内容，同时也提出了很多非常tangible的建议，成功的人能成功的一大原因也是他们看到了好的方法就一定会去试一试，人生本来就是不停地和自己的人性作斗争，带上你要开始改变的决心，愿我们都能成为高效的行动派！平庸的人关心怎样耗费时间，有才能的人竭力利用时间 —— 叔本华最聪明的人是最不愿浪费时间的人 —— 但丁浪费时间叫虚度，剥用时间叫生活 —— 扬格]]></content>
+      <categories>
+        <category>生活小记</category>
+      </categories>
       <tags>
         <tag>随笔</tag>
         <tag>读书笔记</tag>
@@ -38,6 +50,9 @@
     <title><![CDATA[hexo+github搭建自己的博客debug]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F12%2F07%2Fhexo%2Bgithub%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2debug%2F</url>
     <content type="text"><![CDATA[受简书上的小伙伴影响，觉得自己也需要搭建一个自己的博客，说做就做，用了小半天吧，并不是很容易，尤其是中间会出很多很多bug，然后，安装五分钟，debug五小时（此时应有笑哭）最早参考的是简书上的《5分钟 搭建免费个人博客》文章，但他这里面讲的还不是非常细致，所以又看了很多其他的博客，在这里归纳总结一下吧。至于具体的流程：https://www.cnblogs.com/visugar/p/6821777.html这篇博文中讲的还是比较细致的，可以参考。下面我就总结一下出现的问题和解决方法。 问题1：hexo安装成功，并且正确运行，但是localhost:4000不能访问原因1：你没有安装IIS（互联网信息服务）。解决方法：控制面板–程序，然后点击“启用或关闭Windows功能”，把“Internet Information Services”点上。其中有个FTP服务器可以不开。点确定后就自动安装上了。再打开浏览器，输入localhost就行了。原因2：你的电脑4000端口被占用了。hexo默认的端口是4000，如果你的电脑安装了福昕阅读器，那就不能继续使用4000端口啦。解决方法：启动hexo s 的时候，用hexo s -p 5000 ，换成5000端口，就可以访问。 问题2，搭建 hexo，在执行 hexo deploy 后，出现 error deployer not found:github 的错误原因：没安装hexo-deployer-git插件解决方法：1、安装依赖插件npm install hexo-deployer-git –save2、修改_config.yml，deploy的type由github改为gitdeploy: type: git repo: git@github.com:yourname/yourname.github.io.git branch: master3、重新部署hexo deploy注意：以上的命令都需要在Git bash下完成。（由于没有在Git bash下执行，导致我大半的时间都是在搞这个问题，cmd有毒。有关hexo的博客中有美元符开头的代码，基本上就是在Git bash下完成的啊！） 问题3，一些语法错误比如： can not read a block mapping entry; a multiline key may not be an implicit key at line 5, column 11:检查_config.yml中的内容，特别注意所有冒号的后面需要有一个空格！ #################################################当然这是三个比较有代表性的问题了，其他的诸多小问题，也可以参见：https://xuanwo.io/2014/08/14/hexo-usual-problem/ 一文 附几个常用的命令：1、创建博客 $ hexo init username.github.io/2、测试 $ hexo s3、安装hexo-deployer-git自动部署发布工具 $ npm install hexo-deployer-git –save4、发布，测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中。$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d另外:Git bash中复制粘贴是：从其他地方复制后，shift+F12就可以（或者insert）]]></content>
+      <categories>
+        <category>前端打怪升级中</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -46,6 +61,9 @@
     <title><![CDATA[如何发布自己的文章到hexo博客上]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F12%2F07%2F%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E7%AB%A0%E5%88%B0hexo%E5%8D%9A%E5%AE%A2%E4%B8%8A%2F</url>
     <content type="text"><![CDATA[用github+hexo搭建完个人博客后，朋友们应该很想知道怎么在上面写博文吧，这里介绍两个很简单的方法 1,使用CSDN网上面提供的MarkDown编辑器https://mp.csdn.net/mdeditor/# (在csdn博客写新文章的时候能切换到这种编辑器)，写好文章后，找到菜单栏的“导出到本地”选项 以md格式导出到本地，然后copy该md文件，粘贴到你当初建的博客站点文件夹下的source\ _posts目录下，一个md文件对应一篇博客文章。接着在你博客站点文件夹下右键空白处，选择Git Bash Here，输入：hexo generate，回车，生成静态页面;再输入：hexo server，回车，到localhost:4000预览博客效果;最后输入：hexo deploy，回车，同步到github上去就行了。 2,打开git bash输入如下命令创建文章，其中title为文章的标题$ hexo new “title”之后会发现在source\ _posts目录下生成了一个”title.md”，之后就可以在这个文件中写自己的博客啦！写好之后再按照上述的步骤走一遍就可以了。]]></content>
+      <categories>
+        <category>前端打怪升级中</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -54,6 +72,9 @@
     <title><![CDATA[MATLAB中如何保存嵌套循环的中间变量值]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F12%2F06%2FMATLAB%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%9D%E5%AD%98%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%B8%AD%E9%97%B4%E5%8F%98%E9%87%8F%E5%80%BC%2F</url>
     <content type="text"><![CDATA[思想：先预置一个空矩阵，然后把每次循环的结果分别逐个加入这个空矩阵。% Purpose：Save intermediate variable values for nested loops% Programmer：YQH% Date:20181206clear all;tic;lamda1=[0:0.1:1];lamda2=1-lamda1;dip1=[70,80,90]; %idip2=[70,80,90,100]; % jkappa1=[20,24,25];kappa2=[50,59,60,70];l=length(lamda1);a=length(dip1);b=length(dip2);g=length(kappa1);h=length(kappa2);total=labgh; mil1=[];result=[]; %预置的空矩阵file=’results.mat’;for i=1:a for j=1:b for k=1:g for m=1:h for n=1:l mil1=dip1(i)dip2(j)kappa1(k)kappa2(m)lamda1(n)*lamda2(n); result=[result dip1(i) dip2(j) kappa1(k) kappa2(m) mil1 ];% save(file,’mil’,’-append’); %可要可不要 end end end endendresult=result’;result=reshape(result,5,total);result=result’;save(file,’result’);toc]]></content>
+      <categories>
+        <category>我爱MATLAB</category>
+      </categories>
       <tags>
         <tag>MATLAB</tag>
       </tags>
@@ -62,6 +83,9 @@
     <title><![CDATA[MATLAB矩阵计算陌生命令总结（一）]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F11%2F17%2FMATLAB%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E9%99%8C%E7%94%9F%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
     <content type="text"><![CDATA[在进行MATLAB矩阵科学计算时，会用到以下命令，由于不是很熟悉，我将其总结记录如下。Meshgrid生成二维网格，用法为：[x y]=meshgrid(a b);% a 和b是一维数组，如a=[1 2 3]; b= [2 3 4]; 则生成的 X 和 Y 都是为 3X3 维的矩阵， [x y]=meshgrid(a,b)x = 1 2 3 1 2 3 1 2 3y = 2 2 2 3 3 3 4 4 4 ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※flipud函数实现矩阵的上下翻转。如：flipud(A)实现了矩阵A的上下翻转。注意：区别于fliplr函数，该函数是实现矩阵的左右翻转。※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※将Figure中的标题和图例中的下划线正确显示出来：Figure；plot(x,y)%绘图title(strrep(str1,’‘,’\‘));※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※B = repmat(A,m,n)将矩阵A复制m×n块，即把A作为B的元素，B由m×n个A平铺而成。B的维数是 [size(A,1)m, size(A,2)n] 。 A =1 23 4B = repmat(A,2,3)B =1 2 1 2 1 23 4 3 4 3 41 2 1 2 1 23 4 3 4 3 4 ※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※chol() 用于对矩阵进行Cholesky分解 假定X是正定的, R=chol(X)则产生一个上三角阵R,使R’R=X。※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※out = blkdiag(a,b,c,d,…)（其中 a、b、c、d、… 均为矩阵）输出以下形式的分块对角矩阵输入矩阵不必是方阵，其大小也不必相等。※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※diag函数功能：矩阵对角元素的提取和创建对角阵 aa = -1.3282 -1.7925 0.4092 -0.3803 0.5858 -0.4684 -0.9560 0.7356 0.8292diag(aa)ans = -1.3282 0.5858 0.8292diag(aa,1)ans = -1.7925 -0.4684diag(aa,2)ans = 0.4092]]></content>
+      <categories>
+        <category>我爱MATLAB</category>
+      </categories>
       <tags>
         <tag>MATLAB</tag>
       </tags>
@@ -70,6 +94,9 @@
     <title><![CDATA[Sentinel-1精轨数据下载（排雷）]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F11%2F01%2FSentinel-1%E7%B2%BE%E8%BD%A8%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%EF%BC%88%E6%8E%92%E9%9B%B7%EF%BC%89%2F</url>
     <content type="text"><![CDATA[轨道信息是InSAR数据处理中非常重要的信息，从最初的图像配准到最后的形变图像生成都有着重要的作用。含有误差的轨道信息造成基线误差以残差条纹的形式存在于干涉图中。因此，使用卫星精密轨道数据对轨道信息进行修正，可有效去除因轨道误差引起的系统性误差。 Sentinel-1精轨数据官方下载https://qc.sentinel1.eo.esa.int/aux_poeorb/当这个网站无法打开的时候，可以选择如下网站作为替代：https://www.asf.alaska.edu/sentinel/data/ Sentinel-1数据下载Sentinel-1数据文件命名格式： 轨道数据的下载点击Sentinel-1A precision state vectors：https://s1qc.asf.alaska.edu/ 包含一个文件目录树◎ aux_poeorb中包含POD Precise Orbit Ephemerides（POD精密定轨星历数据），是最精确的轨道数据，但该数据距离GNSS下行21天之后才可以使用。每天会产生一个文件，每个文件覆盖26个小时（一整天24小时加上一天开始前1小时和一天结束后的1小时），定位精度优于5厘米。◎ aux_resorb中包含POD Restituted Orbit（POD回归轨道数据，是比较精确轨道数据，文件在接收到GNSS数据的3小时内产生。该文件覆盖一个卫星的轨道，从升序节点ANX加593 OSV重叠于卫星轨道的时间跨度之前。定位精度优于10厘米。 轨道文件命名规则1）精密轨道数据文件都有3个日期，1-精密轨道数据发布日期，2-数据成像时间的前一天，3-数据成像时间的后一天。20180607成像的轨道文件即为：!!!注意：一定要看清楚是S1A任务还是S1B，文件目录的前半部分是S1A，后半部分是S1B。（踩雷）轨道参数文件命名规则详见官方参考文档52页https://sentinel.esa.int/documents/247904/351187/GMES_Sentinels_POD_Service_File_Format_Specification2）对于回归轨道的数据：V后面的代表有效的时间段，包含起止时间。由所需的成像时间去选取合适的时间段。※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※也有另一些欧空局哥白尼计划的参与者的网站也是可以下载到Sentinel-1数据的：※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※]]></content>
+      <categories>
+        <category>玩转卫星</category>
+      </categories>
       <tags>
         <tag>InSAR</tag>
         <tag>卫星数据</tag>
@@ -79,6 +106,9 @@
     <title><![CDATA[Sentinel-1A卫星数据下载]]></title>
     <url>%2Fh22222222.github.io%2F2018%2F10%2F12%2FSentinel-1A%E5%8D%AB%E6%98%9F%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%2F</url>
     <content type="text"><![CDATA[Sentinel-1A卫星于2014年4月3日发射升空，是欧洲空间局哥白尼计划发射的首颗环境监测卫星。经过一年左右的调试和预运行，在2015年4月至5月期间，该卫星开始稳定运行，采用12天的重访周期进行全球成像，Sentinel-1B也于2016年4月25号成功发射。届时两颗卫星同时运行，将观测效率提高一倍，缩短为6天。欧洲空间局对卫星数据实施免费开放政策，这极大地推动了InSAR技术在国内的发展与应用。下载网址：哨兵科学数据中心（Sentinels Scientific Data Hub）数据下载网址：https://scihub.copernicus.eu/（也有说法：https://scihub.esa.int，但是网站无法打开），用来查询和下载Sentinel系列卫星数据。（1）访问网址，进入网址首页。（2）点击Open Hub进入数据查询页面。（3）注册并登录，在查询窗口输入感兴趣区域名称和数据类型或者先绘制感兴趣区域后在搜索框中输入要下载的数据类型进行查询（干涉数据查询时，绘制感兴趣区域要尽量小，避免出现多轨道数据查询结果。下载多景数据进行干涉叠加处理时，需按照同一轨道且重访周期12天及12天的倍数进行数据下载）。（4）做DnSAR处理时，干涉像对应当尽量选取时间和空间基线都较短的，以保证较好的干涉效果。点击Add Product to Cart将需要的数据添加到右侧Cart中。右侧的五个图标分别代表“select product”、“zoom to product”、“view product details（显示SLC影像的详细）”、“remove product from cart”及“download product”。（5）确定需要的SLC像对之后点击下载，由于单个数据的大小都在6G以上，所以需要一个较大的内存空间，可在硬盘中下载，下载时间大约两个小时这样。附：哨兵1A数据类型：SM SLC ——条带模式的斜距单视复数产品IW SLC——干涉宽幅模式（TOPS Mode）的斜距单视复数产品EW SLC——超宽幅模式（TOPS Mode）的斜距单视复数产品SM GRD——条带模式的地距多视产品IW GRD——干涉宽幅模式（TOPS Mode）的地距多视产品EW GRD——超宽幅模式（TOPS Mode）的地距多视产品]]></content>
+      <categories>
+        <category>玩转卫星</category>
+      </categories>
       <tags>
         <tag>InSAR</tag>
         <tag>卫星数据</tag>
