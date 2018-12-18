@@ -1761,6 +1761,13 @@ pre .javascript .function {
     transform: rotateZ(-30deg);
   }
 }
+.post-copyright {
+  margin: 2em 0 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid #ff1700;
+  background-color: #f9f9f9;
+  list-style: none;
+}
 .rtl.post-body p,
 .rtl.post-body a,
 .rtl.post-body h1,
@@ -1942,7 +1949,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5eff90;
+  background: #f014ac;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2786,4 +2793,17 @@ embed {
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+body {
+  background: url("https://source.unsplash.com/random/1600x900");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  margin-top: 60px;
+  padding: 60px 60px 60px 60px;
+  background: #fff;
+  opacity: 0.8;
+  min-height: 500px;
 }
