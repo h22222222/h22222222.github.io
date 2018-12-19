@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图2.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图3.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图4.png">
-<meta property="og:updated_time" content="2018-12-19T06:14:50.029Z">
+<meta property="og:updated_time" content="2018-12-19T06:28:39.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo blog 之主题个性化">
 <meta name="twitter:description" content="hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换，同时也可以根据自己的喜好来进行一些个性化的设置。">
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.6k
+                  1.7k
                 </span>
               
 
@@ -470,6 +470,8 @@
 <p>在主题配置文件 _config.yml，添加如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Online contact </span><br><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: 这里输入前面获取的app_id</span><br></pre></td></tr></table></figure>
 <p>next 主题下聊天的按钮会和其他按钮重叠到一起，可以到聊天设置，修改下按钮的位置:<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图4.png"><br>可以在 hexo s 调试模式下进行调试，效果满意后部署就可以看到最终效果啦！</p>
+<h2 id="修改代码块自定义样式"><a href="#修改代码块自定义样式" class="headerlink" title="修改代码块自定义样式"></a>修改<code></code>代码块自定义样式</h2><p>打开\themes\next\source\css_custom\custom.styl,向里面加入：(颜色可以自己定义)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// Custom styles.</span><br><span class="line">code &#123;</span><br><span class="line">    color: #ff7600;</span><br><span class="line">    background: #fbf7f8;</span><br><span class="line">    margin: 2px;</span><br><span class="line">&#125;</span><br><span class="line">// 大代码块的自定义样式</span><br><span class="line">.highlight, pre &#123;</span><br><span class="line">    margin: 5px 0;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    border-radius: 3px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight, code, pre &#123;</span><br><span class="line">    border: 1px solid #d6d6d6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://blog.csdn.net/mango_haoming/article/details/78473243" target="_blank" rel="noopener">https://blog.csdn.net/mango_haoming/article/details/78473243</a><br><a href="https://www.jianshu.com/p/9f0e90cc32c2" target="_blank" rel="noopener">https://www.jianshu.com/p/9f0e90cc32c2</a> （强烈推荐，这个写的很全了）<br><a href="https://hoxis.github.io/hexo-next-daovoice.html" target="_blank" rel="noopener">https://hoxis.github.io/hexo-next-daovoice.html</a></p>
 
       
@@ -719,7 +721,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加菜单栏内容"><span class="nav-number">1.</span> <span class="nav-text">添加菜单栏内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加fork-me-on-github"><span class="nav-number">2.</span> <span class="nav-text">添加fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底部标签样式"><span class="nav-number">3.</span> <span class="nav-text">修改底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量"><span class="nav-number">4.</span> <span class="nav-text">添加文章阅读量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加打赏"><span class="nav-number">5.</span> <span class="nav-text">增加打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标点击出现桃心效果"><span class="nav-number">6.</span> <span class="nav-text">鼠标点击出现桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动更换背景图片"><span class="nav-number">7.</span> <span class="nav-text">自动更换背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-DaoVoice-实现在线聊天功能"><span class="nav-number">8.</span> <span class="nav-text">配置 DaoVoice 实现在线聊天功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">9.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加菜单栏内容"><span class="nav-number">1.</span> <span class="nav-text">添加菜单栏内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加fork-me-on-github"><span class="nav-number">2.</span> <span class="nav-text">添加fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底部标签样式"><span class="nav-number">3.</span> <span class="nav-text">修改底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量"><span class="nav-number">4.</span> <span class="nav-text">添加文章阅读量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加打赏"><span class="nav-number">5.</span> <span class="nav-text">增加打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标点击出现桃心效果"><span class="nav-number">6.</span> <span class="nav-text">鼠标点击出现桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动更换背景图片"><span class="nav-number">7.</span> <span class="nav-text">自动更换背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-DaoVoice-实现在线聊天功能"><span class="nav-number">8.</span> <span class="nav-text">配置 DaoVoice 实现在线聊天功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">9.</span> <span class="nav-text">修改代码块自定义样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">10.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
