@@ -625,34 +625,14 @@
 
       
         
-          
-            <h2 id="添加菜单栏内容"><a href="#添加菜单栏内容" class="headerlink" title="添加菜单栏内容"></a>添加菜单栏内容</h2><p>最原始的主题中，只有首页和归档两个菜单选项，这里我需要添加其他的选项，在主题配置文件_config.yml中的menu选项中添加需要的选项去掉注释即可，我设置了显示标签、分类：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图1.png"></p>
-<p>重新部署之后打开博客，点击进去，却报错：Cannot GET /tags/，不要慌，不能获取tags，创建一个就OK！<br>这里介绍创建page的语法：<br>hexo new page ‘name’ # name分别为tags、categories 创建了pages。<br>在gitbash中输入以下命令：<br>hexo new page ‘tags’ #创建tags子目录<br>hexo new page ‘categories’ #创建categories子目录<br>在你的网站根目录下面的source文件夹会分别生成tags、categories以及about文件夹。<br>分别修改这tags和categories文件夹中的index.md文件，新增type属性，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-01-04 11:45:41</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>categories的修改类似。</p>
-<p>当你新建一篇博文的时候，增加上tags和categories属性值，就能在tags和categories界面检索到你的文章了，如：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图2.png"></p>
-<h2 id="添加fork-me-on-github"><a href="#添加fork-me-on-github" class="headerlink" title="添加fork me on github"></a>添加fork me on github</h2><p>在 <a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">http://tholman.com/github-corners/</a> 或者 <a href="https://github.com/blog/273-github-ribbons">https://github.com/blog/273-github-ribbons</a> 选择合适的样式复制代码到themes/next/layout/_layout.swig<br>在<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>下面，重新部署就可以了。之后你就会在你的博客顶端看到一只小猫啦！</p>
-<h2 id="修改底部标签样式"><a href="#修改底部标签样式" class="headerlink" title="修改底部标签样式"></a>修改底部标签样式</h2><p>修改Blog\themes\next\layout_macro\post.swig中文件，搜索<code>rel=&quot;tag&quot;&gt;#</code>，将#替换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code>。修改后的效果就是这样的：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图3.png"></p>
-<h2 id="添加文章阅读量"><a href="#添加文章阅读量" class="headerlink" title="添加文章阅读量"></a>添加文章阅读量</h2><p>1.进入<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>官网，进行账号注册。登录后，进入控制台，创建应用；</p>
-<p>2.创建应用后，点击存储，创建Class；</p>
-<p>3.在“应用key”查看AppID和AppKey；</p>
-<p>4.打开博客根目录/themes/next/下的_config.yml，查找leancloud，填写复制来的AppID和AppKey，重新生成、部署博客即可正常统计文章阅读量。</p>
-<h2 id="增加打赏"><a href="#增加打赏" class="headerlink" title="增加打赏"></a>增加打赏</h2><p>1.准备支付宝和微信二维码图片，并将图片放入themes/next/source/images中。</p>
-<p>2.在_config.yml中配置图片</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reward_comment: 请我喝一杯茶吧！</span><br><span class="line">wechatpay: /images/wechat.jpg</span><br><span class="line">alipay: /images/aipay.png</span><br></pre></td></tr></table></figure>
-<h2 id="鼠标点击出现桃心效果"><a href="#鼠标点击出现桃心效果" class="headerlink" title="鼠标点击出现桃心效果"></a>鼠标点击出现桃心效果</h2><p>在/themes/next/source/js/src里面新建love.js：</p>
-<pre><code>!function(e,t,a){function n(){c(&quot;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}&quot;),o(),r()}function r(){for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)}function o(){var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e){t&amp;&amp;t(),i(e)}}function i(e){var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)}function s(){return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
-</code></pre><p>之后在\themes\next\layout_layout.swig文件末尾添加以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="自动更换背景图片"><a href="#自动更换背景图片" class="headerlink" title="自动更换背景图片"></a>自动更换背景图片</h2><p>1.自动更换背景的实现是修改添加背景的css样式实现。图片来源是 <a href="https://source.unsplash.com/，" target="_blank" rel="noopener">https://source.unsplash.com/，</a> 这个网站，里面不仅免费提供了很多高清美图，而且还提供api接口调用，实在是良心。这里实现的原理也是调用了这个网站的接口。</p>
-<p>2.修改themes\next\source\css\ _custom\custom.styl文件，这个是Next故意留给用户自己个性化定制一些样式的文件，添加以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    background:url(https://source.unsplash.com/random/1600x900);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果自己不喜欢这个网址提供的图片做背景，那么修改url()里面的路径即可。repeat、attachment、position就是调整图片的位置，不重复出现、不滚动等等。</p>
-<p>3.修改不透明度<br>完成这一步其实背景就会自动更换了，但是会出现一个问题，因为next主题的背景是纯透明的，这样子就造成背景图片的影响看不见文字，这对于博客来说肯定不行。那么就需要调整背景的不透明度了。同样是修改themes\next\source\css\ _custom\custom.styl文件。在后面添加如下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.main-inner &#123; </span><br><span class="line">    margin-top: 60px;</span><br><span class="line">    padding: 60px 60px 60px 60px;</span><br><span class="line">    background: #fff;</span><br><span class="line">    opacity: 0.8;</span><br><span class="line">    min-height: 500px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://blog.csdn.net/mango_haoming/article/details/78473243" target="_blank" rel="noopener">https://blog.csdn.net/mango_haoming/article/details/78473243</a><br><a href="https://www.jianshu.com/p/9f0e90cc32c2" target="_blank" rel="noopener">https://www.jianshu.com/p/9f0e90cc32c2</a> （强烈推荐，这个写的很全了）</p>
-
-          
+          <p>Hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换。<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/h22222222.github.io/2018/12/20/hexo blog 之主题个性化/#more" rel="contents">
+              read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
