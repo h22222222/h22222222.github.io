@@ -99,7 +99,8 @@
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图2.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图3.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图4.png">
-<meta property="og:updated_time" content="2018-12-19T08:10:45.192Z">
+<meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图5.png">
+<meta property="og:updated_time" content="2018-12-19T11:50:40.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo blog 之主题个性化">
 <meta name="twitter:description" content="hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换，同时也可以根据自己的喜好来进行一些个性化的设置。">
@@ -403,7 +404,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.7k
+                  1.9k
                 </span>
               
 
@@ -419,7 +420,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  8
                 </span>
               
             </div>
@@ -471,6 +472,10 @@
 <p>next 主题下聊天的按钮会和其他按钮重叠到一起，可以到聊天设置，修改下按钮的位置:<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图4.png"><br>可以在 hexo s 调试模式下进行调试，效果满意后部署就可以看到最终效果啦！</p>
 <h2 id="修改代码块自定义样式"><a href="#修改代码块自定义样式" class="headerlink" title="修改代码块自定义样式"></a>修改代码块自定义样式</h2><p>打开\themes\next\source\css_custom\custom.styl，向里面加入：(颜色可以自己定义)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// Custom styles.</span><br><span class="line">code &#123;</span><br><span class="line">    color: #ff7600;</span><br><span class="line">    background: #fbf7f8;</span><br><span class="line">    margin: 2px;</span><br><span class="line">&#125;</span><br><span class="line">// 大代码块的自定义样式</span><br><span class="line">.highlight, pre &#123;</span><br><span class="line">    margin: 5px 0;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    border-radius: 3px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight, code, pre &#123;</span><br><span class="line">    border: 1px solid #d6d6d6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="更改背景颜色"><a href="#更改背景颜色" class="headerlink" title="更改背景颜色"></a>更改背景颜色</h2><p>如果不想用背景图片，可选择更改背景颜色，在\themes\next\source\css_variables中找到base.styl文件中修改下列颜色即可：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图5.png"><br>这里推荐给大家一个很好的查色号的网站：<a href="https://www.color-hex.com/color/" target="_blank" rel="noopener">color-hex</a>，超级好用了！</p>
+<h2 id="引入自定义-js-文件"><a href="#引入自定义-js-文件" class="headerlink" title="引入自定义 js 文件"></a>引入自定义 js 文件</h2><p>之前看到一个非常好玩的动态人型时钟，找到了它的源码js文件，想在自己的博客里也加一个这样的时钟，如果也有感兴趣的朋友，可以参见：<a href="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js" target="_blank" rel="noopener">http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js</a><br>1.将js文件放到your_project\themes\&lt;theme_name&gt;\source\js\src文件目录下；<br>2.之后在\themes\next\layout\ _layout.swig文件中的合适位置加入以下代码即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/你的文件.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>当然也可以直接加到你的博文中。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://blog.csdn.net/mango_haoming/article/details/78473243" target="_blank" rel="noopener">https://blog.csdn.net/mango_haoming/article/details/78473243</a><br><a href="https://www.jianshu.com/p/9f0e90cc32c2" target="_blank" rel="noopener">https://www.jianshu.com/p/9f0e90cc32c2</a> （强烈推荐，这个写的很全了）<br><a href="https://hoxis.github.io/hexo-next-daovoice.html" target="_blank" rel="noopener">https://hoxis.github.io/hexo-next-daovoice.html</a></p>
 
       
@@ -721,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加菜单栏内容"><span class="nav-number">1.</span> <span class="nav-text">添加菜单栏内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加fork-me-on-github"><span class="nav-number">2.</span> <span class="nav-text">添加fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底部标签样式"><span class="nav-number">3.</span> <span class="nav-text">修改底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量"><span class="nav-number">4.</span> <span class="nav-text">添加文章阅读量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加打赏"><span class="nav-number">5.</span> <span class="nav-text">增加打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标点击出现桃心效果"><span class="nav-number">6.</span> <span class="nav-text">鼠标点击出现桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动更换背景图片"><span class="nav-number">7.</span> <span class="nav-text">自动更换背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-DaoVoice-实现在线聊天功能"><span class="nav-number">8.</span> <span class="nav-text">配置 DaoVoice 实现在线聊天功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">9.</span> <span class="nav-text">修改代码块自定义样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">10.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加菜单栏内容"><span class="nav-number">1.</span> <span class="nav-text">添加菜单栏内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加fork-me-on-github"><span class="nav-number">2.</span> <span class="nav-text">添加fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底部标签样式"><span class="nav-number">3.</span> <span class="nav-text">修改底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量"><span class="nav-number">4.</span> <span class="nav-text">添加文章阅读量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加打赏"><span class="nav-number">5.</span> <span class="nav-text">增加打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标点击出现桃心效果"><span class="nav-number">6.</span> <span class="nav-text">鼠标点击出现桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动更换背景图片"><span class="nav-number">7.</span> <span class="nav-text">自动更换背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-DaoVoice-实现在线聊天功能"><span class="nav-number">8.</span> <span class="nav-text">配置 DaoVoice 实现在线聊天功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">9.</span> <span class="nav-text">修改代码块自定义样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改背景颜色"><span class="nav-number">10.</span> <span class="nav-text">更改背景颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入自定义-js-文件"><span class="nav-number">11.</span> <span class="nav-text">引入自定义 js 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">12.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
