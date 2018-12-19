@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="Hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换。">
+<meta name="description" content="hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换，同时也可以根据自己的喜好来进行一些个性化的设置。">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo blog 之主题个性化">
 <meta property="og:url" content="https://github.com/h22222222/h22222222.github.io/2018/12/20/hexo blog 之主题个性化/index.html">
 <meta property="og:site_name" content="YuqingHe&#39;s mind">
-<meta property="og:description" content="Hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换。">
+<meta property="og:description" content="hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换，同时也可以根据自己的喜好来进行一些个性化的设置。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图1.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图2.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图3.png">
-<meta property="og:updated_time" content="2018-12-19T04:51:10.026Z">
+<meta property="og:updated_time" content="2018-12-19T04:52:28.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo blog 之主题个性化">
-<meta name="twitter:description" content="Hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换。">
+<meta name="twitter:description" content="hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换，同时也可以根据自己的喜好来进行一些个性化的设置。">
 <meta name="twitter:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图1.png">
 
 
@@ -431,7 +431,7 @@
       
 
       
-        <p>Hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换。<br><a id="more"></a>  </p>
+        <p>hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换，同时也可以根据自己的喜好来进行一些个性化的设置。<br><a id="more"></a>  </p>
 <h2 id="添加菜单栏内容"><a href="#添加菜单栏内容" class="headerlink" title="添加菜单栏内容"></a>添加菜单栏内容</h2><p>最原始的主题中，只有首页和归档两个菜单选项，这里我需要添加其他的选项，在主题配置文件_config.yml中的menu选项中添加需要的选项去掉注释即可，我设置了显示标签、分类：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图1.png"></p>
 <p>重新部署之后打开博客，点击进去，却报错：Cannot GET /tags/，不要慌，不能获取tags，创建一个就OK！<br>这里介绍创建page的语法：<br>hexo new page ‘name’ # name分别为tags、categories 创建了pages。<br>在gitbash中输入以下命令：<br>hexo new page ‘tags’ #创建tags子目录<br>hexo new page ‘categories’ #创建categories子目录<br>在你的网站根目录下面的source文件夹会分别生成tags、categories以及about文件夹。<br>分别修改这tags和categories文件夹中的index.md文件，新增type属性，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-01-04 11:45:41</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
