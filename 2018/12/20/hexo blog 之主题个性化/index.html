@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图2.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图3.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图4.png">
-<meta property="og:updated_time" content="2018-12-19T07:02:30.484Z">
+<meta property="og:updated_time" content="2018-12-19T08:00:34.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo blog 之主题个性化">
 <meta name="twitter:description" content="hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换，同时也可以根据自己的喜好来进行一些个性化的设置。">
@@ -444,8 +444,7 @@
 <h2 id="添加菜单栏内容"><a href="#添加菜单栏内容" class="headerlink" title="添加菜单栏内容"></a>添加菜单栏内容</h2><p>最原始的主题中，只有首页和归档两个菜单选项，这里我需要添加其他的选项，在主题配置文件_config.yml中的menu选项中添加需要的选项去掉注释即可，我设置了显示标签、分类：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图1.png"></p>
 <p>重新部署之后打开博客，点击进去，却报错：Cannot GET /tags/，不要慌，不能获取tags，创建一个就OK！<br>这里介绍创建page的语法：<br>hexo new page ‘name’ # name分别为tags、categories 创建了pages。<br>在gitbash中输入以下命令：<br>hexo new page ‘tags’ #创建tags子目录<br>hexo new page ‘categories’ #创建categories子目录<br>在你的网站根目录下面的source文件夹会分别生成tags、categories以及about文件夹。<br>分别修改这tags和categories文件夹中的index.md文件，新增type属性，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-01-04 11:45:41</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>categories的修改类似。</p>
-<p>当你新建一篇博文的时候，增加上tags和categories属性值，就能在tags和categories界面检索到你的文章了，如：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图2.png"></p>
+<p>categories的修改类似。<br>当你新建一篇博文的时候，增加上tags和categories属性值，就能在tags和categories界面检索到你的文章了，如：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图2.png"></p>
 <h2 id="添加fork-me-on-github"><a href="#添加fork-me-on-github" class="headerlink" title="添加fork me on github"></a>添加fork me on github</h2><p>在 <a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">http://tholman.com/github-corners/</a> 或者 <a href="https://github.com/blog/273-github-ribbons">https://github.com/blog/273-github-ribbons</a> 选择合适的样式复制代码到themes/next/layout/_layout.swig<br>在<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>下面，重新部署就可以了。之后你就会在你的博客顶端看到一只小猫啦！</p>
 <h2 id="修改底部标签样式"><a href="#修改底部标签样式" class="headerlink" title="修改底部标签样式"></a>修改底部标签样式</h2><p>修改Blog\themes\next\layout_macro\post.swig中文件，搜索<code>rel=&quot;tag&quot;&gt;#</code>，将#替换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code>。修改后的效果就是这样的：<br><img src="/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图3.png"></p>
 <h2 id="添加文章阅读量"><a href="#添加文章阅读量" class="headerlink" title="添加文章阅读量"></a>添加文章阅读量</h2><p>1.进入<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>官网，进行账号注册。登录后，进入控制台，创建应用；</p>
@@ -1412,5 +1411,3 @@
 
 </body>
 </html>
-<!-- <!-- 页面点击小红心 -->  -->
-<!-- <script type="text/javascript" src="/js/src/love.js"></script> -->
