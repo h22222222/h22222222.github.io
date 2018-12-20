@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图2.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图3.png">
 <meta property="og:image" content="https://github.com/h22222222.github.io/2018/12/20/hexo%20blog%20之主题个性化/图4.png">
-<meta property="og:updated_time" content="2018-12-19T13:49:23.198Z">
+<meta property="og:updated_time" content="2018-12-20T07:17:00.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo blog 之主题个性化">
 <meta name="twitter:description" content="hexo安装过后，默认的主题是landscape，如果不喜欢，我们可以进行更换，同时也可以根据自己的喜好来进行一些个性化的设置。">
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.3k
+                  2.5k
                 </span>
               
 
@@ -419,7 +419,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10
+                  11
                 </span>
               
             </div>
@@ -492,6 +492,9 @@
 </li>
 </ol>
 <p>添加之后再执行<code>hexo d -g</code>，再刷新页面就能看到效果。</p>
+<h2 id="修改文章内链接文本样式"><a href="#修改文章内链接文本样式" class="headerlink" title="修改文章内链接文本样式"></a>修改文章内链接文本样式</h2><p>修改<code>Blog/themes/next/source/css/_common/components/post/post.styl</code>，在末尾添加CSS样式，颜色可以按需更换：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 文章内链接文本样式</span><br><span class="line">.post-body p a&#123;</span><br><span class="line">  color: #0593d3; //原始链接颜色</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  border-bottom: 1px solid #0593d3; //底部分割线颜色</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #fc6423; //鼠标经过颜色</span><br><span class="line">    border-bottom: none;</span><br><span class="line">    border-bottom: 1px solid #fc6423; //底部分割线颜色</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>当你鼠标移动到超链接上时超链接就会自动变成你设置的颜色了。</p>
+<h2 id="主页显示的文章折叠"><a href="#主页显示的文章折叠" class="headerlink" title="主页显示的文章折叠"></a>主页显示的文章折叠</h2><p>当不希望主页上显示每篇文章的全文时，可以在博文中.md文件中加一句<code>&lt;!-- more --&gt;</code>，这句代码之后的部分就会被折叠起来，并会显示<code>read more</code>。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://blog.csdn.net/mango_haoming/article/details/78473243" target="_blank" rel="noopener">https://blog.csdn.net/mango_haoming/article/details/78473243</a><br><a href="https://www.jianshu.com/p/9f0e90cc32c2" target="_blank" rel="noopener">https://www.jianshu.com/p/9f0e90cc32c2</a> （强烈推荐，这个写的很全了）<br><a href="https://hoxis.github.io/hexo-next-daovoice.html" target="_blank" rel="noopener">https://hoxis.github.io/hexo-next-daovoice.html</a></p>
 
       
@@ -742,7 +745,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加菜单栏内容"><span class="nav-number">1.</span> <span class="nav-text">添加菜单栏内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加fork-me-on-github"><span class="nav-number">2.</span> <span class="nav-text">添加fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底部标签样式"><span class="nav-number">3.</span> <span class="nav-text">修改底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量"><span class="nav-number">4.</span> <span class="nav-text">添加文章阅读量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加打赏"><span class="nav-number">5.</span> <span class="nav-text">增加打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标点击出现桃心效果"><span class="nav-number">6.</span> <span class="nav-text">鼠标点击出现桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动更换背景图片"><span class="nav-number">7.</span> <span class="nav-text">自动更换背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-DaoVoice-实现在线聊天功能"><span class="nav-number">8.</span> <span class="nav-text">配置 DaoVoice 实现在线聊天功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">9.</span> <span class="nav-text">修改代码块自定义样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改背景颜色"><span class="nav-number">10.</span> <span class="nav-text">更改背景颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入自定义-js-文件"><span class="nav-number">11.</span> <span class="nav-text">引入自定义 js 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部字数统计"><span class="nav-number">12.</span> <span class="nav-text">网站底部字数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部加上访问量"><span class="nav-number">13.</span> <span class="nav-text">网站底部加上访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">14.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加菜单栏内容"><span class="nav-number">1.</span> <span class="nav-text">添加菜单栏内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加fork-me-on-github"><span class="nav-number">2.</span> <span class="nav-text">添加fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改底部标签样式"><span class="nav-number">3.</span> <span class="nav-text">修改底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文章阅读量"><span class="nav-number">4.</span> <span class="nav-text">添加文章阅读量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加打赏"><span class="nav-number">5.</span> <span class="nav-text">增加打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标点击出现桃心效果"><span class="nav-number">6.</span> <span class="nav-text">鼠标点击出现桃心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动更换背景图片"><span class="nav-number">7.</span> <span class="nav-text">自动更换背景图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-DaoVoice-实现在线聊天功能"><span class="nav-number">8.</span> <span class="nav-text">配置 DaoVoice 实现在线聊天功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">9.</span> <span class="nav-text">修改代码块自定义样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改背景颜色"><span class="nav-number">10.</span> <span class="nav-text">更改背景颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入自定义-js-文件"><span class="nav-number">11.</span> <span class="nav-text">引入自定义 js 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部字数统计"><span class="nav-number">12.</span> <span class="nav-text">网站底部字数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部加上访问量"><span class="nav-number">13.</span> <span class="nav-text">网站底部加上访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">14.</span> <span class="nav-text">修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主页显示的文章折叠"><span class="nav-number">15.</span> <span class="nav-text">主页显示的文章折叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">16.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
@@ -787,7 +790,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">|&nbsp;&nbsp;博客全站共8.7k字</span>
+  <span class="post-count">|&nbsp;&nbsp;博客全站共8.9k字</span>
 </div>
 
 
