@@ -102,12 +102,10 @@
 <meta property="og:site_name" content="YuqingHe&#39;s mind">
 <meta property="og:description" content="在进行MATLAB矩阵科学计算时，会用到以下命令，由于不是很熟悉，我将其总结记录如下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181117095311180.png">
-<meta property="og:updated_time" content="2018-12-19T10:50:57.942Z">
+<meta property="og:updated_time" content="2018-12-25T05:54:35.562Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MATLAB矩阵计算陌生命令总结（一）">
 <meta name="twitter:description" content="在进行MATLAB矩阵科学计算时，会用到以下命令，由于不是很熟悉，我将其总结记录如下。">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181117095311180.png">
 
 
 
@@ -407,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  393
+                  445
                 </span>
               
 
@@ -423,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -444,24 +442,18 @@
       
 
       
-        <p>在进行MATLAB矩阵科学计算时，会用到以下命令，由于不是很熟悉，我将其总结记录如下。<br><a id="more"></a><br>Meshgrid生成二维网格，用法为：[x y]=meshgrid(a b);<br>% a 和b是一维数组，如a=[1 2 3]; b= [2 3 4]; 则生成的 X 和 Y 都是为 3X3 维的矩阵，</p>
-<blockquote>
-<blockquote>
-<p>[x y]=meshgrid(a,b)<br>x =<br>    1     2     3<br>    1     2     3<br>    1     2     3<br>y =<br>  2     2     2<br>  3     3     3<br>  4     4     4    </p>
-</blockquote>
-</blockquote>
-<p>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>flipud函数实现矩阵的上下翻转。如：flipud(A)实现了矩阵A的上下翻转。注意：区别于fliplr函数，该函数是实现矩阵的左右翻转。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>将Figure中的标题和图例中的下划线正确显示出来：<br>Figure；<br>plot(x,y)%绘图<br>title(strrep(str1,’<em>‘,’\</em>‘));<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>B = repmat(A,m,n)<br>将矩阵A复制m×n块，即把A作为B的元素，B由m×n个A平铺而成。B的维数是 [size(A,1)<em>m, size(A,2)</em>n] 。</p>
-<blockquote>
-<blockquote>
-<p>A =<br>1 2<br>3 4<br>B = repmat(A,2,3)<br>B =<br>1 2 1 2 1 2<br>3 4 3 4 3 4<br>1 2 1 2 1 2<br>3 4 3 4 3 4</p>
-</blockquote>
-</blockquote>
-<p>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>chol() 用于对矩阵进行Cholesky分解 假定X是正定的, R=chol(X)则产生一个上三角阵R,使R’R=X。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>out = blkdiag(a,b,c,d,…)（其中 a、b、c、d、… 均为矩阵）输出以下形式的分块对角矩阵<br><img src="https://img-blog.csdnimg.cn/20181117095311180.png" alt="在这里插入图片描述"><br>输入矩阵不必是方阵，其大小也不必相等。<br>※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※<br>diag函数功能：矩阵对角元素的提取和创建对角阵</p>
-<blockquote>
-<blockquote>
-<p>aa =<br>   -1.3282   -1.7925    0.4092<br>   -0.3803    0.5858   -0.4684<br>   -0.9560    0.7356    0.8292<br>diag(aa)<br>ans =<br>   -1.3282<br>    0.5858<br>    0.8292<br>diag(aa,1)<br>ans =<br>   -1.7925<br>   -0.4684<br>diag(aa,2)<br>ans =<br>    0.4092</p>
-</blockquote>
-</blockquote>
+        <p>在进行MATLAB矩阵科学计算时，会用到以下命令，由于不是很熟悉，我将其总结记录如下。<br><a id="more"></a></p>
+<h2 id="Meshgrid"><a href="#Meshgrid" class="headerlink" title="Meshgrid"></a>Meshgrid</h2><p>Meshgrid生成二维网格，用法为：<br><code>[x y]=meshgrid(a b);</code><br>% a 和b是一维数组，如a=[1 2 3]; b= [2 3 4]; 则生成的 X 和 Y 都是为 3X3 维的矩阵。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; [x y]=meshgrid(a,b)</span><br><span class="line">x =</span><br><span class="line">    1     2     3</span><br><span class="line">    1     2     3</span><br><span class="line">    1     2     3</span><br><span class="line">y =</span><br><span class="line">  2     2     2</span><br><span class="line">  3     3     3</span><br><span class="line">  4     4     4</span><br></pre></td></tr></table></figure></p>
+<h2 id="flipud"><a href="#flipud" class="headerlink" title="flipud"></a>flipud</h2><p>flipud函数实现矩阵的上下翻转。如：<code>flipud(A)</code>实现了矩阵A的上下翻转。注意：区别于fliplr函数，该函数是实现矩阵的左右翻转。 </p>
+<h2 id="strrep"><a href="#strrep" class="headerlink" title="strrep"></a>strrep</h2><p>将Figure中的标题和图例中的下划线正确显示出来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Figure；</span><br><span class="line">plot(x,y)%绘图</span><br><span class="line">title(strrep(str1,&apos;_&apos;,&apos;\_&apos;));</span><br></pre></td></tr></table></figure></p>
+<h2 id="repmat"><a href="#repmat" class="headerlink" title="repmat"></a>repmat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B = repmat(A,m,n)</span><br></pre></td></tr></table></figure>
+<p>将矩阵A复制m×n块，即把A作为B的元素，B由m×n个A平铺而成。B的维数是 [size(A,1)<em>m, size(A,2)</em>n] 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;A =</span><br><span class="line">1 2</span><br><span class="line">3 4</span><br><span class="line">&gt;&gt; B = repmat(A,2,3)</span><br><span class="line">B =</span><br><span class="line">1 2 1 2 1 2</span><br><span class="line">3 4 3 4 3 4</span><br><span class="line">1 2 1 2 1 2</span><br><span class="line">3 4 3 4 3 4</span><br></pre></td></tr></table></figure>
+<h2 id="chol"><a href="#chol" class="headerlink" title="chol"></a>chol</h2><p>chol函数用于对矩阵进行Cholesky分解，假定X是正定的, <code>R=chol(X)</code>则产生一个上三角阵R,使R’R=X。</p>
+<h2 id="blkdiag"><a href="#blkdiag" class="headerlink" title="blkdiag"></a>blkdiag</h2><p><code>out = blkdiag(a,b,c,d,...)</code>（其中 a、b、c、d、… 均为矩阵）输出以下形式的分块对角矩阵</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a 0 0 0 0 0</span><br><span class="line">0 b 0 0 0 0</span><br><span class="line">0 0 c 0 0 0</span><br><span class="line">0 0 0 d 0 0</span><br><span class="line">0 0 0 0 ...</span><br></pre></td></tr></table></figure>
+<p>输入矩阵不必是方阵，其大小也不必相等。</p>
+<h2 id="diag"><a href="#diag" class="headerlink" title="diag"></a>diag</h2><p>diag函数功能：矩阵对角元素的提取和创建对角阵<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;aa =</span><br><span class="line">   -1.3282   -1.7925    0.4092</span><br><span class="line">   -0.3803    0.5858   -0.4684</span><br><span class="line">   -0.9560    0.7356    0.8292</span><br><span class="line">&gt;&gt; diag(aa)</span><br><span class="line">ans =</span><br><span class="line">   -1.3282</span><br><span class="line">    0.5858</span><br><span class="line">    0.8292</span><br><span class="line">&gt;&gt; diag(aa,1)</span><br><span class="line">ans =</span><br><span class="line">   -1.7925</span><br><span class="line">   -0.4684</span><br><span class="line">&gt;&gt; diag(aa,2)</span><br><span class="line">ans =</span><br><span class="line">    0.4092</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -618,8 +610,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -726,6 +727,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Meshgrid"><span class="nav-number">1.</span> <span class="nav-text">Meshgrid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flipud"><span class="nav-number">2.</span> <span class="nav-text">flipud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#strrep"><span class="nav-number">3.</span> <span class="nav-text">strrep</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#repmat"><span class="nav-number">4.</span> <span class="nav-text">repmat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chol"><span class="nav-number">5.</span> <span class="nav-text">chol</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#blkdiag"><span class="nav-number">6.</span> <span class="nav-text">blkdiag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diag"><span class="nav-number">7.</span> <span class="nav-text">diag</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -764,7 +781,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">|&nbsp;&nbsp;博客全站共9k字</span>
+  <span class="post-count">|&nbsp;&nbsp;博客全站共9.1k字</span>
 </div>
 
 
