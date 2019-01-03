@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[如何正确优雅地使用武大超算进行MATLAB计算]]></title>
+    <title><![CDATA[如何正确优雅地使用武大超算进行MATLAB计算（续）]]></title>
     <url>%2Fh22222222.github.io%2F2019%2F01%2F04%2F%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BC%98%E9%9B%85%E5%9C%B0%E4%BD%BF%E7%94%A8%E6%AD%A6%E5%A4%A7%E8%B6%85%E7%AE%97%E8%BF%9B%E8%A1%8CMATLAB%E8%AE%A1%E7%AE%97%EF%BC%88%E7%BB%AD%EF%BC%89%2F</url>
     <content type="text"><![CDATA[武大超算集群在2018年12月26日进行为期三天的停机升级，同时升级了存储系统。升级之后的超算换汤不换药，原来的配方基础上增加了性能，当然，在超算上运行MATLAB程序也要有所改变了。 升级之后官方的swarm集群文件系统说明/home：用户主目录，主要存放用户的环境变量等信息，限额1G，长期保存;/project：用户项目文件、运行程序等，限额1T，长期保存；/workfs：用户数据文件，限额3T，超过3个月的数据会自动清理；/software：系统软件，用户只读。 原来集群home数据已经迁移到/project/hp_home目录下，用户主目录里有指向hp_home的连接原来集群data下的数据已经迁移到project下 使用升级之后的超算运行MATLAB程序1、超算升级之后，再次运行MATLAB程序时要注意，matlab_mdcs_slurm.sh脚本里的路径 /home/software/…. 改为 /software/…2、将更改后的matlab_mdcs_slurm.sh仍拷贝到data目录下，现在再运行脚本时，要到hp_home/data目录下运行./matlab_mdcs_slurm.sh，脚本里面的工作目录work_dir依然写成”/data/xxx/test6/Codes”就可以了。 123$ cd hp_home$ cd data$ ./ matlab_mdcs_slurm.sh]]></content>
       <categories>
