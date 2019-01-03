@@ -103,7 +103,7 @@
 <meta property="og:description" content="武大超算集群在2018年12月26日进行为期三天的停机升级，同时升级了存储系统。升级之后的超算换汤不换药，原来的配方基础上增加了性能，当然，在超算上运行MATLAB程序也要有所改变了。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190103163838958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-01-03T08:55:17.659Z">
+<meta property="og:updated_time" content="2019-01-03T09:14:48.750Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何正确优雅地使用武大超算进行MATLAB计算（续）">
 <meta name="twitter:description" content="武大超算集群在2018年12月26日进行为期三天的停机升级，同时升级了存储系统。升级之后的超算换汤不换药，原来的配方基础上增加了性能，当然，在超算上运行MATLAB程序也要有所改变了。">
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  319
+                  320
                 </span>
               
 
@@ -445,9 +445,9 @@
 
       
         <p>武大超算集群在2018年12月26日进行为期三天的停机升级，同时升级了存储系统。升级之后的超算换汤不换药，原来的配方基础上增加了性能，当然，在超算上运行MATLAB程序也要有所改变了。<br><a id="more"></a></p>
-<h2 id="升级之后官方的swarm集群文件系统说明"><a href="#升级之后官方的swarm集群文件系统说明" class="headerlink" title="升级之后官方的swarm集群文件系统说明"></a>升级之后官方的swarm集群文件系统说明</h2><p>/home：用户主目录，主要存放用户的环境变量等信息，限额1G，长期保存;<br>/project：用户项目文件、运行程序等，限额1T，长期保存；<br>/workfs：用户数据文件，限额3T，超过3个月的数据会自动清理；<br>/software：系统软件，用户只读。</p>
-<p><strong>原来集群home数据已经迁移到/project/hp_home目录下，用户主目录里有指向hp_home的连接<br>原来集群data下的数据已经迁移到project下</strong></p>
-<h2 id="使用升级之后的超算运行MATLAB程序"><a href="#使用升级之后的超算运行MATLAB程序" class="headerlink" title="使用升级之后的超算运行MATLAB程序"></a>使用升级之后的超算运行MATLAB程序</h2><p>1、超算升级之后，再次运行MATLAB程序时要注意，matlab_mdcs_slurm.sh脚本里的路径 /home/software/…. 改为 /software/…<br><img src="https://img-blog.csdnimg.cn/20190103163838958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、将更改后的matlab_mdcs_slurm.sh仍拷贝到data目录下，现在再运行脚本时，要到hp_home/data目录下运行./matlab_mdcs_slurm.sh，脚本里面的工作目录work_dir依然写成”/data/xxx/test6/Codes”就可以了。</p>
+<h2 id="升级之后官方的swarm集群文件系统说明"><a href="#升级之后官方的swarm集群文件系统说明" class="headerlink" title="升级之后官方的swarm集群文件系统说明"></a>升级之后官方的swarm集群文件系统说明</h2><p><code>/home</code>：用户主目录，主要存放用户的环境变量等信息，限额1G，长期保存;<br><code>/project</code>：用户项目文件、运行程序等，限额1T，长期保存；<br><code>/workfs</code>：用户数据文件，限额3T，超过3个月的数据会自动清理；<br><code>/software</code>：系统软件，用户只读。</p>
+<p><strong>原来集群<code>home</code>数据已经迁移到<code>/project/hp_home</code>目录下，用户主目录里有指向<code>hp_home</code>的连接<br>原来集群<code>data</code>下的数据已经迁移到<code>project</code>下</strong></p>
+<h2 id="使用升级之后的超算运行MATLAB程序"><a href="#使用升级之后的超算运行MATLAB程序" class="headerlink" title="使用升级之后的超算运行MATLAB程序"></a>使用升级之后的超算运行MATLAB程序</h2><p>1、超算升级之后，再次运行MATLAB程序时要注意，<code>matlab_mdcs_slurm.sh</code>脚本里的路径 <code>/home/software/....</code>改为 <code>/software/...</code><br><img src="https://img-blog.csdnimg.cn/20190103163838958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、将更改后的<code>matlab_mdcs_slurm.sh</code>仍拷贝到<code>hp_home/data</code>目录下，现在再运行脚本时，要到<code>hp_home/data</code>目录下运行<code>./matlab_mdcs_slurm.sh</code>，脚本里面的工作目录<code>work_dir</code>依然写成”<code>/data/xxx/test6/Codes</code>“就可以了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd  hp_home</span><br><span class="line">$ cd data</span><br><span class="line">$ ./ matlab_mdcs_slurm.sh</span><br></pre></td></tr></table></figure>
 
       
