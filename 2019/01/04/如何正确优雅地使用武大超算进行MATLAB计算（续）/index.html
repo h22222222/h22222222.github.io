@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="MATLAB,超算,">
 
 
 
@@ -94,14 +94,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="随笔">
-<meta property="og:url" content="https://h22222222.github.io/随笔/index.html">
+<meta name="description" content="武大超算集群在2018年12月26日进行为期三天的停机升级，同时升级了存储系统。升级之后的超算换汤不换药，原来的配方基础上增加了性能，当然，在超算上运行MATLAB程序也要有所改变了。">
+<meta name="keywords" content="MATLAB,超算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何正确优雅地使用武大超算进行MATLAB计算">
+<meta property="og:url" content="https://h22222222.github.io/2019/01/04/如何正确优雅地使用武大超算进行MATLAB计算（续）/index.html">
 <meta property="og:site_name" content="YuqingHe&#39;s mind">
+<meta property="og:description" content="武大超算集群在2018年12月26日进行为期三天的停机升级，同时升级了存储系统。升级之后的超算换汤不换药，原来的配方基础上增加了性能，当然，在超算上运行MATLAB程序也要有所改变了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-07T08:39:32.328Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190103163838958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-01-03T08:53:29.975Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随笔">
+<meta name="twitter:title" content="如何正确优雅地使用武大超算进行MATLAB计算">
+<meta name="twitter:description" content="武大超算集群在2018年12月26日进行为期三天的停机升级，同时升级了存储系统。升级之后的超算换汤不换药，原来的配方基础上增加了性能，当然，在超算上运行MATLAB程序也要有所改变了。">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190103163838958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70">
 
 
 
@@ -131,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https://h22222222.github.io/随笔/">
+  <link rel="canonical" href="https://h22222222.github.io/2019/01/04/如何正确优雅地使用武大超算进行MATLAB计算（续）/">
 
 
 
 
 
-  <title>随笔 | YuqingHe's mind</title>
+  <title>如何正确优雅地使用武大超算进行MATLAB计算 | YuqingHe's mind</title>
   
 
 
@@ -284,33 +290,283 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://h22222222.github.io/h22222222.github.io/2019/01/04/如何正确优雅地使用武大超算进行MATLAB计算（续）/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YuqingHe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/h22222222.github.io/images/wo111.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuqingHe's mind">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">随笔</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">如何正确优雅地使用武大超算进行MATLAB计算</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T16:53:05Z">
+                2019-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/h22222222.github.io/categories/我爱MATLAB/" itemprop="url" rel="index">
+                    <span itemprop="name">我爱MATLAB</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/h22222222.github.io/2019/01/04/如何正确优雅地使用武大超算进行MATLAB计算（续）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/h22222222.github.io/2019/01/04/如何正确优雅地使用武大超算进行MATLAB计算（续）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/h22222222.github.io/2019/01/04/如何正确优雅地使用武大超算进行MATLAB计算（续）/" class="leancloud_visitors" data-flag-title="如何正确优雅地使用武大超算进行MATLAB计算">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  319
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>武大超算集群在2018年12月26日进行为期三天的停机升级，同时升级了存储系统。升级之后的超算换汤不换药，原来的配方基础上增加了性能，当然，在超算上运行MATLAB程序也要有所改变了。<br><a id="more"></a></p>
+<h2 id="升级之后官方的swarm集群文件系统说明"><a href="#升级之后官方的swarm集群文件系统说明" class="headerlink" title="升级之后官方的swarm集群文件系统说明"></a>升级之后官方的swarm集群文件系统说明</h2><p>/home：用户主目录，主要存放用户的环境变量等信息，限额1G，长期保存;<br>/project：用户项目文件、运行程序等，限额1T，长期保存；<br>/workfs：用户数据文件，限额3T，超过3个月的数据会自动清理；<br>/software：系统软件，用户只读。</p>
+<p><strong>原来集群home数据已经迁移到/project/hp_home目录下，用户主目录里有指向hp_home的连接<br>原来集群data下的数据已经迁移到project下</strong></p>
+<h2 id="使用升级之后的超算运行MATLAB程序"><a href="#使用升级之后的超算运行MATLAB程序" class="headerlink" title="使用升级之后的超算运行MATLAB程序"></a>使用升级之后的超算运行MATLAB程序</h2><p>1、超算升级之后，再次运行MATLAB程序时要注意，matlab_mdcs_slurm.sh脚本里的路径 /home/software/…. 改为 /software/…<br><img src="https://img-blog.csdnimg.cn/20190103163838958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTg4ODE3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">2、将更改后的matlab_mdcs_slurm.sh仍拷贝到data目录下，现在再运行脚本时，要到hp_home/data目录下运行./matlab_mdcs_slurm.sh，脚本里面的工作目录work_dir依然写成”/data/xxx/test6/Codes”就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd  hp_home</span><br><span class="line">$ cd data</span><br><span class="line">$ ./ matlab_mdcs_slurm.sh</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
     
     
+      <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #777777;font-size:14px;">-------------文章到结尾啦&nbsp;&nbsp;<i class="fa fa-paw"></i>&nbsp;&nbsp;感谢您的阅读-------------</div>
+    
+</div>
+  
+    </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请我喝一杯茶吧~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/pay.png" alt="YuqingHe 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="YuqingHe 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    YuqingHe  |  微信公众号【IamYQH】
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://h22222222.github.io/2019/01/04/如何正确优雅地使用武大超算进行MATLAB计算（续）/" title="如何正确优雅地使用武大超算进行MATLAB计算">https://h22222222.github.io/2019/01/04/如何正确优雅地使用武大超算进行MATLAB计算（续）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+  <li class="post-copyright-license">
+    感谢您的阅读和支持！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/h22222222.github.io/tags/MATLAB/" rel="tag"><i class="fa fa-tag"></i> MATLAB</a>
+          
+            <a href="/h22222222.github.io/tags/超算/" rel="tag"><i class="fa fa-tag"></i> 超算</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/h22222222.github.io/2018/12/24/BBC随身英语/" rel="next" title="BBC随身英语">
+                <i class="fa fa-chevron-left"></i> BBC随身英语
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -347,8 +603,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -454,6 +719,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#升级之后官方的swarm集群文件系统说明"><span class="nav-number">1.</span> <span class="nav-text">升级之后官方的swarm集群文件系统说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用升级之后的超算运行MATLAB程序"><span class="nav-number">2.</span> <span class="nav-text">使用升级之后的超算运行MATLAB程序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
