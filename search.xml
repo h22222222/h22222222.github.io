@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo博客转移及绑定个人域名]]></title>
+    <url>%2Fh22222222.github.io%2F2020%2F12%2F18%2FHexo%E5%8D%9A%E5%AE%A2%E8%BD%AC%E7%A7%BB%E5%8F%8A%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[换新电脑啦！ hexo 博客转移&emsp;&emsp;因为换了电脑，需要将原来的博客文件夹导到新电脑上，因为不熟悉GitHub的机制，搞得非常麻烦，不过好在后面成功弄好了，记录一下一些踩坑的地方。 直接将你原电脑上的博客文件夹拷贝到新电脑上，放到C:\Users\Admin\文件夹下即可，什么改变都不用做； 安装Git Bash双击下载好的exe文件，一路next就好啦，安装好后，打开gitbash，查看版本：git version； 安装NodeJsHexo是基于nodeJS环境的静态博客，需要用到其中的npm工具，下载地址(说明：LTS为长期支持版，Current为当前最新版)，安装时记得在Custom Setup这一步记得选 Add to PATH ,这样你就不用自己去配置电脑上环境变量了，装完后查看版本：node -v注：如果你安装的是最新版本的node，在之后hexo deploy的时候就会报错长长的一堆，所以这里要注意安装的时候装稳定版的node12.14版本即可，可以在历史版本里找到。 安装hexo在你博客的文件夹里右键打开git bash，安装hexo：npm i -g hexo；安装完成后，查看版本，若有版本信息即为成功。 部署到github上还是在你博客的文件夹下，依次输入hexo generate hexo server hexo deploy hexo 博客绑定个人域名&emsp;&emsp;用hexo+GitHub搭建的个人博客，服务器用的是GitHub的，然后域名默认也是GitHub下的二级域名：username.github.io，如果想换成个性域名就需要准备一个域名进行重定向将自己的博客指向一个新的域名。 1、购买域名 https://wanwang.aliyun.com/ &emsp;&emsp;在阿里云上置办一个心仪的域名，购买了自己心仪的域名后，进入阿里云的管理控制台-域名与网站-域名就可以看到购买的域名，进行实名认证之后就可以进行其他操作啦。 2、添加CNAME&emsp;&emsp;在博客文件夹的source文件夹下新建一个名为CNAME的文件（没有后缀），在里面添加你购买的域名。 3、域名解析云解析DNS网址： https://homenew.console.aliyun.com/home/scene/ProductAndService &emsp;&emsp;首先获取自己 github 的二级域名的 IP地址，在cmd里ping一下自己的博客就会得到IP地址：ping username.github.io；之后进入阿里云的管理控制台-域名与网站-云解析DNS，进入域名的解析设置，点击新手指导，将之前得到的IP地址填到记录值一栏，点击确定就将购买的域名指向 github 的二级域名了。 4、在github上打开你部署博客username.github.io项目的（Settings）设置，然后在Custom domain设置里填上购买的域名。 5、重新deploy一下，就可以看到域名已经重定向啦！]]></content>
+      <categories>
+        <category>前端打怪升级中</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[摸爬滚打做产品（7）---Double PM]]></title>
     <url>%2Fh22222222.github.io%2F2020%2F12%2F15%2F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89%2F</url>
     <content type="text"><![CDATA[项目管理学习笔记（四）项目沟通管理 （七）项目沟通管理（1）沟通目标让正确的受众在正确的时间地点以正确的形式获得正确的信息，所以对于沟通来说，主要是信息的正确传递。（2）沟通方式 交互式（面对面，适合人少），war room作战室就是交互式办公一个较好的方式 推式（推送式） 拉式（下拉式） （3）书面沟通的5C原则 &emsp;&emsp;在这里分享一点我的经验： 写文档时要注意正确的格式，目录编号，标题主次分明。这是一份文档的排面，直接影响了受众是否愿意读完。在写完之后一定要核对一下这些细节的部分，避免一些不必要的非技术错误。当时在腾讯产品经理灯塔计划的培训中，就是因为作业提交之前又临时改了一些内容导致序号出错，提交后才发现这个问题，当时就非常后悔。 弄清是写给谁的，客户还是你的领导。记得当时在看《令人心动的offer 2》时，实习生们在完成任务的时候因为没有注意到是写给客户的意见信，用了过多的专业术语和法律条款导致沟通失败。 简洁的语言表述最全面的意思。还是以《offer 2》中的场景为例，写给客户看的意见就不应该堆砌较多的专业内容，最好以通俗的语言/案例来向客户表达意见，并且避免狗拉羊肠子。放到科研来说，大家还是比较喜欢读短文章，言简意赅，能较快抓住核心思想。只有文章本身是以方法创新为主导的时候需要大篇幅地仔细介绍。 （4）沟通模型及沟通漏斗 &emsp;&emsp;沟通模型有些类似在计算机中的信息传递模型（再次印证沟通就是信息的传递），通过发送发的编码和沟通方式的传递到达接收方进行解码，但是由于路径噪音、沟通漏斗的存在，并不能保证信息正确传递到了接收方，因此我们需要进行确认和反馈，比如让对方重复一遍信息，保证对方理解了意思。&emsp;&emsp;在沟通中还存在一个过滤现象，即信息通过多级的传递之后受损，那为了避免这个问题，我们就需要扁平化、自组织的团队模式，减少沟通层级，并化单向为双向沟通，提高沟通效率。另外，还要注意沟通路径不能过多，有n个人就是Cn2条路径，路径过多也不利于交流，因此需要控制团队的规模。 （5）会议管理 &emsp;&emsp;我觉得需要注意的三点： 控制会议规模（两个披萨原则）：发言者、决策者、为决策承担责任者 一定要有主持人的引导，把握时间，拒绝所谓的“无领导讨论”（这个真的深有体会，公说公有理，婆说婆有理，两个小时也讨论不出来一个结果） 注意在下次会议前几分钟对上次会议存在的问题和决策进行复盘review，更好地提升开会效率。]]></content>
@@ -9,17 +20,6 @@
       </categories>
       <tags>
         <tag>产品设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[hexo博客转移及绑定个人域名]]></title>
-    <url>%2Fh22222222.github.io%2F2020%2F12%2F08%2FHexo%E5%8D%9A%E5%AE%A2%E8%BD%AC%E7%A7%BB%E5%8F%8A%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%2F</url>
-    <content type="text"><![CDATA[换新电脑啦！ hexo 博客转移&emsp;&emsp;因为换了电脑，需要将原来的博客文件夹导到新电脑上，因为不熟悉GitHub的机制，搞得非常麻烦，不过好在后面成功弄好了，记录一下一些踩坑的地方。 直接将你原电脑上的博客文件夹拷贝到新电脑上，放到C:\Users\Admin\文件夹下即可，什么改变都不用做； 安装Git Bash双击下载好的exe文件，一路next就好啦，安装好后，打开gitbash，查看版本：git version； 安装NodeJsHexo是基于nodeJS环境的静态博客，需要用到其中的npm工具，下载地址(说明：LTS为长期支持版，Current为当前最新版)，安装时记得在Custom Setup这一步记得选 Add to PATH ,这样你就不用自己去配置电脑上环境变量了，装完后查看版本：node -v注：如果你安装的是最新版本的node，在之后hexo deploy的时候就会报错长长的一堆，所以这里要注意安装的时候装稳定版的node12.14版本即可，可以在历史版本里找到。 安装hexo在你博客的文件夹里右键打开git bash，安装hexo：npm i -g hexo；安装完成后，查看版本，若有版本信息即为成功。 部署到github上还是在你博客的文件夹下，依次输入hexo generate hexo server hexo deploy hexo 博客绑定个人域名&emsp;&emsp;用hexo+GitHub搭建的个人博客，服务器用的是GitHub的，然后域名默认也是GitHub下的二级域名：username.github.io，如果想换成个性域名就需要准备一个域名进行重定向将自己的博客指向一个新的域名。 1、购买域名 https://wanwang.aliyun.com/ &emsp;&emsp;在阿里云上置办一个心仪的域名，购买了自己心仪的域名后，进入阿里云的管理控制台-域名与网站-域名就可以看到购买的域名，进行实名认证之后就可以进行其他操作啦。 2、添加CNAME&emsp;&emsp;在博客文件夹的source文件夹下新建一个名为CNAME的文件（没有后缀），在里面添加你购买的域名。 3、域名解析云解析DNS网址： https://homenew.console.aliyun.com/home/scene/ProductAndService &emsp;&emsp;首先获取自己 github 的二级域名的 IP地址，在cmd里ping一下自己的博客就会得到IP地址：ping username.github.io；之后进入阿里云的管理控制台-域名与网站-云解析DNS，进入域名的解析设置，点击新手指导，将之前得到的IP地址填到记录值一栏，点击确定就将购买的域名指向 github 的二级域名了。 4、在github上打开你部署博客username.github.io项目的（Settings）设置，然后在Custom domain设置里填上购买的域名。 5、重新deploy一下，就可以看到域名已经重定向啦！]]></content>
-      <categories>
-        <category>前端打怪升级中</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
