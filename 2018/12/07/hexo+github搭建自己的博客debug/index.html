@@ -102,12 +102,12 @@
 <meta property="og:site_name" content="YuqingHe&#39;s mind">
 <meta property="og:description" content="受简书上的小伙伴影响，觉得自己也需要搭建一个自己的博客，说做就做，用了小半天吧，并不是很容易，尤其是中间会出很多很多bug，然后，安装五分钟，debug五小时（此时应有笑哭）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/h22222222.github.io/07/hexo+github搭建自己的博客debug/2018/12/07/hexo+github搭建自己的博客debug/图1.png">
+<meta property="og:image" content="/h22222222.github.io/2018/12/07/hexo+github搭建自己的博客debug/图1.png">
 <meta property="og:updated_time" content="2018-12-19T06:57:31.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github搭建自己的博客debug">
 <meta name="twitter:description" content="受简书上的小伙伴影响，觉得自己也需要搭建一个自己的博客，说做就做，用了小半天吧，并不是很容易，尤其是中间会出很多很多bug，然后，安装五分钟，debug五小时（此时应有笑哭）">
-<meta name="twitter:image" content="/h22222222.github.io/07/hexo+github搭建自己的博客debug/2018/12/07/hexo+github搭建自己的博客debug/图1.png">
+<meta name="twitter:image" content="/h22222222.github.io/2018/12/07/hexo+github搭建自己的博客debug/图1.png">
 
 
 
@@ -445,7 +445,7 @@
 
       
         <p>受简书上的小伙伴影响，觉得自己也需要搭建一个自己的博客，说做就做，用了小半天吧，并不是很容易，尤其是中间会出很多很多bug，然后，安装五分钟，debug五小时（此时应有笑哭）<br><a id="more"></a><br>最早参考的是简书上的《5分钟 搭建免费个人博客》文章，但他这里面讲的还不是非常细致，所以又看了很多其他的博客，在这里归纳总结一下吧。<br>至于具体的流程：<br><a href="https://www.cnblogs.com/visugar/p/6821777.html" target="_blank" rel="noopener">https://www.cnblogs.com/visugar/p/6821777.html</a><br>这篇博文中讲的还是比较细致的，可以参考。<br>下面我就总结一下出现的问题和解决方法。</p>
-<h2 id="问题1：hexo安装成功，并且正确运行，但是localhost-4000不能访问"><a href="#问题1：hexo安装成功，并且正确运行，但是localhost-4000不能访问" class="headerlink" title="问题1：hexo安装成功，并且正确运行，但是localhost:4000不能访问"></a>问题1：hexo安装成功，并且正确运行，但是localhost:4000不能访问</h2><p>原因1：你没有安装IIS（互联网信息服务）。<br>解决方法：控制面板–程序，然后点击“启用或关闭Windows功能”，把“Internet Information Services”点上。其中有个FTP服务器可以不开。点确定后就自动安装上了。再打开浏览器，输入localhost就行了。<br><img src="/h22222222.github.io/07/hexo+github搭建自己的博客debug/2018/12/07/hexo+github搭建自己的博客debug/图1.png"><br>原因2：你的电脑4000端口被占用了。<br>hexo默认的端口是4000，如果你的电脑安装了福昕阅读器，那就不能继续使用4000端口啦。<br>解决方法：启动<code>hexo s</code>的时候，用<code>hexo s -p 5000</code>，换成5000端口，就可以访问。</p>
+<h2 id="问题1：hexo安装成功，并且正确运行，但是localhost-4000不能访问"><a href="#问题1：hexo安装成功，并且正确运行，但是localhost-4000不能访问" class="headerlink" title="问题1：hexo安装成功，并且正确运行，但是localhost:4000不能访问"></a>问题1：hexo安装成功，并且正确运行，但是localhost:4000不能访问</h2><p>原因1：你没有安装IIS（互联网信息服务）。<br>解决方法：控制面板–程序，然后点击“启用或关闭Windows功能”，把“Internet Information Services”点上。其中有个FTP服务器可以不开。点确定后就自动安装上了。再打开浏览器，输入localhost就行了。<br><img src="/h22222222.github.io/2018/12/07/hexo+github搭建自己的博客debug/图1.png"><br>原因2：你的电脑4000端口被占用了。<br>hexo默认的端口是4000，如果你的电脑安装了福昕阅读器，那就不能继续使用4000端口啦。<br>解决方法：启动<code>hexo s</code>的时候，用<code>hexo s -p 5000</code>，换成5000端口，就可以访问。</p>
 <h2 id="问题2，搭建-hexo，在执行-hexo-deploy-后，出现-error-deployer-not-found-github-的错误"><a href="#问题2，搭建-hexo，在执行-hexo-deploy-后，出现-error-deployer-not-found-github-的错误" class="headerlink" title="问题2，搭建 hexo，在执行 hexo deploy 后，出现 error deployer not found:github 的错误"></a>问题2，搭建 hexo，在执行 hexo deploy 后，出现 error deployer not found:github 的错误</h2><p>原因：没安装hexo-deployer-git插件<br>解决方法：<br>1、安装依赖插件<br><code>npm install hexo-deployer-git --save</code><br>2、修改_config.yml，deploy的type由github改为git<br>deploy:<br>  type: git<br>  repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourname.github.io.git<br>  branch: master<br>3、重新部署<br><code>hexo deploy</code><br>注意：以上的命令都需要在Git bash下完成。（由于没有在Git bash下执行，导致我大半的时间都是在搞这个问题，cmd有毒。有关hexo的博客中有美元符开头的代码，基本上就是在Git bash下完成的啊！）</p>
 <h2 id="问题3，一些语法错误"><a href="#问题3，一些语法错误" class="headerlink" title="问题3，一些语法错误"></a>问题3，一些语法错误</h2><p>比如： can not read a  block mapping entry; a multiline key may not be an  implicit key at line 5, column 11:<br>检查_config.yml中的内容，特别注意所有冒号的后面需要有一个空格！</p>
 <p>#################################################<br>当然这是三个比较有代表性的问题了，其他的诸多小问题，也可以参见：<a href="https://xuanwo.io/2014/08/14/hexo-usual-problem/" target="_blank" rel="noopener">https://xuanwo.io/2014/08/14/hexo-usual-problem/</a> 一文</p>

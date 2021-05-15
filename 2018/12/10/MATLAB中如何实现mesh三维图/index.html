@@ -102,14 +102,14 @@
 <meta property="og:site_name" content="YuqingHe&#39;s mind">
 <meta property="og:description" content="当有两个自变量和一个因变量需要进行可视化时，可以使用mesh命令绘制双变量的三维图。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/h22222222.github.io/10/MATLAB中如何实现mesh三维图/2018/12/10/MATLAB中如何实现mesh三维图/图1.png">
-<meta property="og:image" content="/h22222222.github.io/10/MATLAB中如何实现mesh三维图/2018/12/10/MATLAB中如何实现mesh三维图/图2.png">
-<meta property="og:image" content="/h22222222.github.io/10/MATLAB中如何实现mesh三维图/2018/12/10/MATLAB中如何实现mesh三维图/图3.png">
+<meta property="og:image" content="/h22222222.github.io/2018/12/10/MATLAB中如何实现mesh三维图/图1.png">
+<meta property="og:image" content="/h22222222.github.io/2018/12/10/MATLAB中如何实现mesh三维图/图2.png">
+<meta property="og:image" content="/h22222222.github.io/2018/12/10/MATLAB中如何实现mesh三维图/图3.png">
 <meta property="og:updated_time" content="2018-12-19T03:00:13.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MATLAB中如何实现mesh三维图">
 <meta name="twitter:description" content="当有两个自变量和一个因变量需要进行可视化时，可以使用mesh命令绘制双变量的三维图。">
-<meta name="twitter:image" content="/h22222222.github.io/10/MATLAB中如何实现mesh三维图/2018/12/10/MATLAB中如何实现mesh三维图/图1.png">
+<meta name="twitter:image" content="/h22222222.github.io/2018/12/10/MATLAB中如何实现mesh三维图/图1.png">
 
 
 
@@ -458,9 +458,9 @@
 </ol>
 </li>
 </ol>
-<p>举例：数据来自百度<br>x=[16 17.5 19 21 22 23.7];<br>y=[3 6 9 10 12];<br>z=[ 0.08    0.09    0.09    0.1    0.11    0.11;<br>0.04    0.05    0.06    0.08    0.1    0.15;<br>0.02    0.05    0.12    0.19    0.27    0.44;<br>0.03    0.06    0.2      0.35    0.46    0.62;<br>0.32    0.45    0.84    0.88    0.94    1.17];<br>figure;<br>mesh(x,y,z);  %两个自变量，一个因变量<br>xlabel(‘自变量1’);<br>ylabel(‘自变量2’);<br>zlabel(‘因变量Z’);<br><img src="/h22222222.github.io/10/MATLAB中如何实现mesh三维图/2018/12/10/MATLAB中如何实现mesh三维图/图1.png"><br>由于数据不够多，画出的图不是光滑，如果想让画出的曲面光滑一些，可以尝试使用griddata命令进行插值。<br>xx=linspace(16,23.7,100);%x是16到23.7的数列，长度为100，长度是可以随意调整的，越大越光滑<br>yy=linspace(3,12,100);%y是3到12的数列，长度为100<br>%数列长度可以根据改变，点数越多，数据点越密<br>zz=griddata(x,y,z,xx,yy’,’cubic’);%三次多项式插值计算<br>figure;<br>mesh(xx,yy,zz);<br>xlabel(‘自变量1’);<br>ylabel(‘自变量2’);<br>zlabel(‘因变量Z’);<br><img src="/h22222222.github.io/10/MATLAB中如何实现mesh三维图/2018/12/10/MATLAB中如何实现mesh三维图/图2.png"></p>
+<p>举例：数据来自百度<br>x=[16 17.5 19 21 22 23.7];<br>y=[3 6 9 10 12];<br>z=[ 0.08    0.09    0.09    0.1    0.11    0.11;<br>0.04    0.05    0.06    0.08    0.1    0.15;<br>0.02    0.05    0.12    0.19    0.27    0.44;<br>0.03    0.06    0.2      0.35    0.46    0.62;<br>0.32    0.45    0.84    0.88    0.94    1.17];<br>figure;<br>mesh(x,y,z);  %两个自变量，一个因变量<br>xlabel(‘自变量1’);<br>ylabel(‘自变量2’);<br>zlabel(‘因变量Z’);<br><img src="/h22222222.github.io/2018/12/10/MATLAB中如何实现mesh三维图/图1.png"><br>由于数据不够多，画出的图不是光滑，如果想让画出的曲面光滑一些，可以尝试使用griddata命令进行插值。<br>xx=linspace(16,23.7,100);%x是16到23.7的数列，长度为100，长度是可以随意调整的，越大越光滑<br>yy=linspace(3,12,100);%y是3到12的数列，长度为100<br>%数列长度可以根据改变，点数越多，数据点越密<br>zz=griddata(x,y,z,xx,yy’,’cubic’);%三次多项式插值计算<br>figure;<br>mesh(xx,yy,zz);<br>xlabel(‘自变量1’);<br>ylabel(‘自变量2’);<br>zlabel(‘因变量Z’);<br><img src="/h22222222.github.io/2018/12/10/MATLAB中如何实现mesh三维图/图2.png"></p>
 <h2 id="设置figure图的背景为白色"><a href="#设置figure图的背景为白色" class="headerlink" title="设置figure图的背景为白色"></a>设置figure图的背景为白色</h2><p>set(0,’defaultfigurecolor’,’w’) </p>
-<h2 id="调整视角"><a href="#调整视角" class="headerlink" title="调整视角"></a>调整视角</h2><p>使用view命令来更改三维图的视角<br>调用格式    含义<br>view(az,el)     给三维空间图形设置观察点的方位角az与仰角el<br>view([az,el])        同上<br>view([x,y,z])    将点(x,y,z)设置为视点<br>view(2)     设置默认的二维形式视点，其中az = 0,el = 90,即从z轴上方观看<br>view(3)    设置默认的三维形式视点，其中az = -37.5, ell = 30<br>[az,el]=view      返回当前的方位角az与仰角el<br>方位角是 x-y 平面中的极坐标角，正值表示按逆时针方向旋转视点。仰角是位于 x-y 平面上方的角度（正角度）或下方的角度（负角度）。<br><img src="/h22222222.github.io/10/MATLAB中如何实现mesh三维图/2018/12/10/MATLAB中如何实现mesh三维图/图3.png"></p>
+<h2 id="调整视角"><a href="#调整视角" class="headerlink" title="调整视角"></a>调整视角</h2><p>使用view命令来更改三维图的视角<br>调用格式    含义<br>view(az,el)     给三维空间图形设置观察点的方位角az与仰角el<br>view([az,el])        同上<br>view([x,y,z])    将点(x,y,z)设置为视点<br>view(2)     设置默认的二维形式视点，其中az = 0,el = 90,即从z轴上方观看<br>view(3)    设置默认的三维形式视点，其中az = -37.5, ell = 30<br>[az,el]=view      返回当前的方位角az与仰角el<br>方位角是 x-y 平面中的极坐标角，正值表示按逆时针方向旋转视点。仰角是位于 x-y 平面上方的角度（正角度）或下方的角度（负角度）。<br><img src="/h22222222.github.io/2018/12/10/MATLAB中如何实现mesh三维图/图3.png"></p>
 
       
     </div>
