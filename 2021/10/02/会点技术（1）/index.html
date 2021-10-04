@@ -113,12 +113,12 @@
 <meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片9.png">
 <meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片10.png">
 <meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片11.png">
-<meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片12.PNG">
-<meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片13.PNG">
-<meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片14.PNG">
+<meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片12.png">
+<meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片13.png">
+<meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片14.png">
 <meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片15.png">
 <meta property="og:image" content="/h22222222.github.io/2021/10/02/会点技术（1）/图片16.png">
-<meta property="og:updated_time" content="2021-10-04T15:40:15.766Z">
+<meta property="og:updated_time" content="2021-10-04T15:45:39.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="会点技术（1）---AI数签神器">
 <meta name="twitter:description" content="会点技术（1）—AI数签神器">
@@ -478,8 +478,8 @@
 &emsp;&emsp;</li>
 <li>实际调用服务时模型效果变差？<br>&emsp;&emsp;训练图片和实际场景要识别的图片拍摄环境应一致，举例：如果实际要识别的图片是摄像头俯拍的，那训练图片就不能用网上下载的目标正面图片。<br>&emsp;&emsp;每个标签的图片需要覆盖实际场景里面的可能性，如拍照角度、光线明暗的变化，训练集覆盖的场景越多，模型的泛化能力越强。<br>&emsp;&emsp;如果使用的是云服务，可以开通云服务数据管理功能，将实际调用云服务识别的图片加入训练集，不断迭代模型。</li>
 </ul>
-<h2 id="6-发布模型"><a href="#6-发布模型" class="headerlink" title="6. 发布模型"></a>6. 发布模型</h2><p>&emsp;&emsp;<br>&emsp;&emsp;发布公有云服务，将训练完成的模型部署在百度云服务器，通过API接口调用模型。每个公有云服务发布成功后享有10000点免费额度，仅作为该服务调用消耗。单次调用将根据选择的训练算法对应不同的点数单价，再根据实际调用消耗点数值计算费用。可以H5的形式在手机端体验，调用耗费：普通版5点/次。<br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片11.png"><br>&emsp;&emsp;<br>&emsp;&emsp;接口说明如下：<br>&emsp;&emsp;标准接口请求参考说明：<br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片12.PNG"></p>
-<p>&emsp;&emsp;标准接口响应字段说明：<br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片13.PNG"><br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片14.PNG"><br>&emsp;&emsp;对于上传的图片的要求也是比较高的，我在这里上传的图片中上半部分像素很差，导致上半部分的竹签都没有识别出来，同时因为背景较为杂乱，一些不是竹签的字体也被误判了。要想获得较好的识别效果，一定要注意上传的图片是否背景简单，曝光度均匀同时物体清晰。</p>
+<h2 id="6-发布模型"><a href="#6-发布模型" class="headerlink" title="6. 发布模型"></a>6. 发布模型</h2><p>&emsp;&emsp;<br>&emsp;&emsp;发布公有云服务，将训练完成的模型部署在百度云服务器，通过API接口调用模型。每个公有云服务发布成功后享有10000点免费额度，仅作为该服务调用消耗。单次调用将根据选择的训练算法对应不同的点数单价，再根据实际调用消耗点数值计算费用。可以H5的形式在手机端体验，调用耗费：普通版5点/次。<br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片11.png"><br>&emsp;&emsp;<br>&emsp;&emsp;接口说明如下：<br>&emsp;&emsp;标准接口请求参考说明：<br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片12.png"></p>
+<p>&emsp;&emsp;标准接口响应字段说明：<br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片13.png"><br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片14.png"><br>&emsp;&emsp;对于上传的图片的要求也是比较高的，我在这里上传的图片中上半部分像素很差，导致上半部分的竹签都没有识别出来，同时因为背景较为杂乱，一些不是竹签的字体也被误判了。要想获得较好的识别效果，一定要注意上传的图片是否背景简单，曝光度均匀同时物体清晰。</p>
 <h2 id="5-彩蛋："><a href="#5-彩蛋：" class="headerlink" title="5. 彩蛋："></a>5. 彩蛋：</h2><p>&emsp;&emsp;<br>&emsp;&emsp;在【AI市场】-【我的已购模型】下有一个官方提供的口罩检测模型，用于识别戴口罩和没有戴口罩的情形，这个模型是免费的，可以直接用来训练业务数据。<br>&emsp;&emsp;<br>&emsp;&emsp;添加数据进行数据处理-数据打标（mask unmask）-训练模型，打标的时候需要注意一些异常case，比如下图，在这里我认为其实unmask，如果在具体的业务场景下认为是戴了口罩的话选择mask标签即可。<br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片15.png"><br>&emsp;&emsp;可以设置为训练完成后用短信形式提醒，在训练的时候就可以干其他事情啦。<br><img src="/h22222222.github.io/2021/10/02/会点技术（1）/图片16.png"></p>
 
       
