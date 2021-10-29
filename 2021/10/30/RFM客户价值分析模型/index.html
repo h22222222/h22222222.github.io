@@ -113,7 +113,7 @@
 <meta property="og:image" content="/h22222222.github.io/2021/10/30/RFM客户价值分析模型/图片9.png">
 <meta property="og:image" content="/h22222222.github.io/2021/10/30/RFM客户价值分析模型/图片10.png">
 <meta property="og:image" content="/h22222222.github.io/2021/10/30/RFM客户价值分析模型/图片11.png">
-<meta property="og:updated_time" content="2021-10-29T06:40:36.559Z">
+<meta property="og:updated_time" content="2021-10-29T06:44:46.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RFM客户价值分析模型">
 <meta name="twitter:description" content="一个有用的模型">
@@ -341,7 +341,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-29T20:23:05Z">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-30T04:23:05+08:00">
                 2021-10-29
               </time>
             
@@ -488,9 +488,11 @@
 <li>从宏观钻取到微观 </li>
 <li>从微观钻取到明细 </li>
 <li>从明细到发起行动 </li>
-<li>兼顾良好的性能和零号的动态性<br>&emsp;&emsp;<h2 id="四、延伸：RFM可以用在什么地方？"><a href="#四、延伸：RFM可以用在什么地方？" class="headerlink" title="四、延伸：RFM可以用在什么地方？"></a>四、延伸：RFM可以用在什么地方？</h2><h3 id="1、分析："><a href="#1、分析：" class="headerlink" title="1、分析："></a>1、分析：</h3>&emsp;&emsp;<br>&emsp;&emsp;在业务中需要用到二八原则的地方都可以将这个模型迁移过去。<br>&emsp;&emsp;<h3 id="2、举例："><a href="#2、举例：" class="headerlink" title="2、举例："></a>2、举例：</h3>&emsp;&emsp;<br><strong>1）项目管理中的质量管理</strong><br>&emsp;&emsp;<br>&emsp;&emsp;对于一个项目或者产品的质量我们能列出很多的影响因素，但在质量管理中可能有80%的问题都是由20%的因素所造成的，如果我们能找到这20%的原因，就能起到事半功倍的效果。<br>&emsp;&emsp;<br><strong>2）硬件健康度管理</strong><br>&emsp;&emsp;<br>&emsp;&emsp;以我在实习中的项目为例，在一期项目上线之后我们实现了看清每日硬件产品的各项指标健康度情况，但仅仅是看清还是不够的，我们还希望能从中找到一些规律，发现每个信号的硬件最容易出问题的是什么指标，从而能更好地指导硬件同学对硬件设计进行完善。只是简单的从每日故障的数量统计中能发现最容易出问题的部件，但是对于这些问题之间的关联性我们不得而知。参考RFM模型从最近一次此故障出现的时间、此故障某段时间内出现的频率及此故障发生后会造成的价值损失来定量化的分析哪些指标是我们最应该关注的，哪些指标是不容易出现的。这样可以帮助我们将注意力更多地放在值得关注的事上，但是对于某些不常出现的问题，一旦出现也可能会造成很大的影响，所以这20%的问题也需要定期监测。<br>&emsp;&emsp;<br><strong>3）B端产品客户分层</strong><br>&emsp;&emsp;<br>&emsp;&emsp;以我在阿里的实习为例，当我们的产品客户越来越多的时候，我们就需要对不同行业的客户进行分层，区分出哪些客户是头部、腰部、尾部客户，之后根据不同层级的客户给予不同的产品销售策略。一般我们在分层的时候就直接是按照行业影响力进行分层，其中可能没有考虑到客户价值和客户的购买意愿，对于一些非行业标杆的小公司，也可能是具有很强购买意愿的企业，也需要将其列为重点关注的客户进行管理。此时，也可以借鉴RFM模型来搭建客户分层矩阵，根据业务特点换为不同的指标即可。<br>&emsp;&emsp;<h2 id="五、SQL-RFM实操例子"><a href="#五、SQL-RFM实操例子" class="headerlink" title="五、SQL RFM实操例子"></a>五、SQL RFM实操例子</h2></li>
+<li>兼顾良好的性能和零号的动态性<br>&emsp;&emsp;</li>
 </ul>
-<h3 id="1、数据："><a href="#1、数据：" class="headerlink" title="1、数据："></a>1、数据：</h3><p>&emsp;&emsp;阿里天池淘宝用户公开数据</p>
+<h2 id="四、延伸：RFM可以用在什么地方？"><a href="#四、延伸：RFM可以用在什么地方？" class="headerlink" title="四、延伸：RFM可以用在什么地方？"></a>四、延伸：RFM可以用在什么地方？</h2><h3 id="1、分析："><a href="#1、分析：" class="headerlink" title="1、分析："></a>1、分析：</h3><p>&emsp;&emsp;<br>&emsp;&emsp;在业务中需要用到二八原则的地方都可以将这个模型迁移过去。<br>&emsp;&emsp;</p>
+<h3 id="2、举例："><a href="#2、举例：" class="headerlink" title="2、举例："></a>2、举例：</h3><p>&emsp;&emsp;<br><strong>1）项目管理中的质量管理</strong><br>&emsp;&emsp;<br>&emsp;&emsp;对于一个项目或者产品的质量我们能列出很多的影响因素，但在质量管理中可能有80%的问题都是由20%的因素所造成的，如果我们能找到这20%的原因，就能起到事半功倍的效果。<br>&emsp;&emsp;<br><strong>2）硬件健康度管理</strong><br>&emsp;&emsp;<br>&emsp;&emsp;以我在实习中的项目为例，在一期项目上线之后我们实现了看清每日硬件产品的各项指标健康度情况，但仅仅是看清还是不够的，我们还希望能从中找到一些规律，发现每个信号的硬件最容易出问题的是什么指标，从而能更好地指导硬件同学对硬件设计进行完善。只是简单的从每日故障的数量统计中能发现最容易出问题的部件，但是对于这些问题之间的关联性我们不得而知。参考RFM模型从最近一次此故障出现的时间、此故障某段时间内出现的频率及此故障发生后会造成的价值损失来定量化的分析哪些指标是我们最应该关注的，哪些指标是不容易出现的。这样可以帮助我们将注意力更多地放在值得关注的事上，但是对于某些不常出现的问题，一旦出现也可能会造成很大的影响，所以这20%的问题也需要定期监测。<br>&emsp;&emsp;<br><strong>3）B端产品客户分层</strong><br>&emsp;&emsp;<br>&emsp;&emsp;以我在阿里的实习为例，当我们的产品客户越来越多的时候，我们就需要对不同行业的客户进行分层，区分出哪些客户是头部、腰部、尾部客户，之后根据不同层级的客户给予不同的产品销售策略。一般我们在分层的时候就直接是按照行业影响力进行分层，其中可能没有考虑到客户价值和客户的购买意愿，对于一些非行业标杆的小公司，也可能是具有很强购买意愿的企业，也需要将其列为重点关注的客户进行管理。此时，也可以借鉴RFM模型来搭建客户分层矩阵，根据业务特点换为不同的指标即可。<br>&emsp;&emsp;</p>
+<h2 id="五、SQL-RFM实操例子"><a href="#五、SQL-RFM实操例子" class="headerlink" title="五、SQL RFM实操例子"></a>五、SQL RFM实操例子</h2><h3 id="1、数据："><a href="#1、数据：" class="headerlink" title="1、数据："></a>1、数据：</h3><p>&emsp;&emsp;阿里天池淘宝用户公开数据</p>
 <h3 id="2、数据库："><a href="#2、数据库：" class="headerlink" title="2、数据库："></a>2、数据库：</h3><p>&emsp;&emsp;mysql</p>
 <h3 id="3、目的："><a href="#3、目的：" class="headerlink" title="3、目的："></a>3、目的：</h3><p>&emsp;&emsp;基于RFM理论找出有价值的用户<br><img src="/h22222222.github.io/2021/10/30/RFM客户价值分析模型/图片3.png"></p>
 <h3 id="4、步骤："><a href="#4、步骤：" class="headerlink" title="4、步骤："></a>4、步骤：</h3><p>M：消费金额，由于数据源中没有相关的金额数据，不计入评分。<br>R：最近购买时间，用户数据的时间范围为9天，最近购买时间的区间为0-9，将其分为5档，0-1,1-2,3-4，5-6，7-8分别对应评分5到1，时间距离越短，分值越高。<br>F：购买次数</p>
